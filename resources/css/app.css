@@ -91,11 +91,6 @@
     margin-top: 10px; /* Add top margin to the container */
   }
   
-  .hello2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px; /* Add top margin to the container */
-  }
   
   /*************************************************************/
   /* Style the toggle buttons */

@@ -160,7 +160,7 @@ document.getElementById('signup-btn').addEventListener('click', function() {
   <h1 class="left-heading">Monthly</h1>
   
   <label class="switch">
-    <input type="checkbox" checked>
+    <input id="periodInput" type="checkbox" checked>
     <span class="slider round"></span>
   </label>
   
@@ -170,44 +170,11 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 <!-- Div container for the headings -->
 <div class="moved-message">
-  <div class="hello1">
-    <!-- Plan divs for Hello Business -->
-    <div class="plan hello-business hidden">
-      <h2 class="plan-title">Plan 4</h2>
-      <p class="plan-price">£99/year</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <button class="buy-now-button">Buy Now</button>
-    </div>
-    <div class="plan hello-business hidden">
-      <h2 class="plan-title">Plan 5</h2>
-      <p class="plan-price">£129/year</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <button class="buy-now-button">Buy Now</button>
-    </div>
-    <div class="plan hello-business hidden">
-      <h2 class="plan-title">Plan 6</h2>
-      <p class="plan-price">£159/year</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <p class="plan-details">Some details</p>
-      <button class="buy-now-button">Buy Now</button>
-    </div>
-  </div>
-  <div class="hello2">
+<div class="flex justify-center mt-2" >
     <!-- Plan divs for Hello Personal -->
-    <div class="plan hello-personal hidden">
+    <div class="plan">
       <h2 class="plan-title">Plan 1</h2>
-      <p class="plan-price">£99/year</p>
+      <p class="plan-price"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
       <p class="plan-details">Some details</p>
       <p class="plan-details">Some details</p>
       <p class="plan-details">Some details</p>
@@ -215,9 +182,9 @@ document.getElementById('signup-btn').addEventListener('click', function() {
       <p class="plan-details">Some details</p>
       <button class="buy-now-button">Buy Now</button>
     </div>
-    <div class="plan hello-personal hidden">
+    <div class="plan">
       <h2 class="plan-title">Plan 2</h2>
-      <p class="plan-price">£129/year</p>
+      <p class="plan-price"><span id="priceText2">$</span>/<span id="periodText2">xxx</span></p>
       <p class="plan-details">Some details</p>
       <p class="plan-details">Some details</p>
       <p class="plan-details">Some details</p>
@@ -225,9 +192,9 @@ document.getElementById('signup-btn').addEventListener('click', function() {
       <p class="plan-details">Some details</p>
       <button class="buy-now-button">Buy Now</button>
     </div>
-    <div class="plan hello-personal hidden">
+    <div class="plan">
       <h2 class="plan-title">Plan 3</h2>
-      <p class="plan-price">£159/year</p>
+      <p class="plan-price"><span id="priceText3">$</span>/<span id="periodText3">xxx</span></p>
       <p class="plan-details">Some details</p>
       <p class="plan-details">Some details</p>
       <p class="plan-details">Some details</p>
@@ -236,11 +203,61 @@ document.getElementById('signup-btn').addEventListener('click', function() {
       <button class="buy-now-button">Buy Now</button>
     </div>
   </div>
+  
 </div>
 
 <script>
 
   let activeButton = 'personal'; // Initialize activeButton
+  let price1 = document.getElementById('priceText1');
+  let price2 = document.getElementById('priceText2');
+  let price3 = document.getElementById('priceText3');
+  let period1 = document.getElementById('periodText1');
+  let period2 = document.getElementById('periodText2');
+  let period3 = document.getElementById('periodText3');
+
+  if(activeButton == 'personal'){
+    price1.innerHTML = '£129';
+    price2.innerHTML = '£159';
+    price3.innerHTML = '£199';
+    if(document.getElementById('periodInput').checked){
+      period1.innerHTML = 'month';
+      period2.innerHTML = 'month';
+      period3.innerHTML = 'month';
+    }else{
+    period1.innerHTML = 'year';
+    period2.innerHTML = 'year';
+    period3.innerHTML = 'year';
+    }
+  }else{
+    price1.innerHTML = '£99';
+    price2.innerHTML = '£129';
+    price3.innerHTML = '£159';
+    if(document.getElementById('periodInput').checked){
+      period1.innerHTML = 'month';
+      period2.innerHTML = 'month';
+      period3.innerHTML = 'month';
+    }else{
+    period1.innerHTML = 'year';
+    period2.innerHTML = 'year';
+    period3.innerHTML = 'year';
+    }
+  }
+
+  //add event listener to the switch
+  document.getElementById('periodInput').addEventListener('click', function() {
+    if(document.getElementById('periodInput').checked){
+      period1.innerHTML = 'month';    
+      period2.innerHTML = 'month';
+      period3.innerHTML = 'month';  
+    }else{
+      period1.innerHTML = 'year';
+      period2.innerHTML = 'year';
+      period3.innerHTML = 'year';      
+    }
+  });
+
+ 
 
   // Your existing toggleButtons function
   function toggleButtons(button) {
@@ -251,38 +268,57 @@ document.getElementById('signup-btn').addEventListener('click', function() {
       activeButton = activeButton === 'personal' ? 'business' : 'personal';
     }
 
-    // Update button classes for active and inactive states
     const buttons = document.querySelectorAll('.buttonss-personal-business');
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       button.classList.remove('active');
-      button.classList.remove('inactive');
+      button.classList.remove('inactive'); // Remove 'inactive' class from all buttons
     });
-    
+
     const activeButtonElement = document.querySelector(`.${activeButton}`);
-    const inactiveButtonElement = document.querySelector(`.${activeButton === 'business' ? 'personal' : 'business'}`);
-    
     activeButtonElement.classList.add('active');
+
+    const inactiveButtonElement = document.querySelector(`.${activeButton === 'business' ? 'personal' : 'business'}`);
     inactiveButtonElement.classList.add('inactive');
 
     // Show the corresponding heading
     const helloHeadings = document.querySelectorAll('.hello-heading');
-    helloHeadings.forEach(heading => {
+    helloHeadings.forEach((heading) => {
       heading.style.display = 'none';
     });
 
-    const activeHelloHeading = document.querySelector(`.hello-${activeButton}`);
-    activeHelloHeading.style.display = 'block';
+    console.log(activeButton);
 
-    // Show the corresponding plans
-    const plans = document.querySelectorAll('.plan');
-    plans.forEach(plan => {
-      plan.classList.add('hidden');
-    });
+    if(activeButton == 'business'){
+      price1.innerHTML = '£129';
+      price2.innerHTML = '£159';
+      price3.innerHTML = '£199';
+      if(document.getElementById('periodInput').checked){
+        period1.innerHTML = 'month';
+        period2.innerHTML = 'month';
+        period3.innerHTML = 'month';
+      }else{
+      period1.innerHTML = 'year';
+      period2.innerHTML = 'year';
+      period3.innerHTML = 'year';
+      }
+    }
+    if(activeButton == 'personal'){
+      price1.innerHTML = '£99';
+      price2.innerHTML = '£129';
+      price3.innerHTML = '£159';
+      if(document.getElementById('periodInput').checked){
+        period1.innerHTML = 'month';
+        period2.innerHTML = 'month';
+        period3.innerHTML = 'month';
+      }else{
+      period1.innerHTML = 'year';
+      period2.innerHTML = 'year';
+      period3.innerHTML = 'year';
+      }
+    }
 
-    const activePlanDivs = document.querySelectorAll(`.${activeButton === 'business' ? 'hello1' : 'hello2'} .plan`);
-    activePlanDivs.forEach(plan => {
-      plan.classList.remove('hidden');
-    });
+
+
   }
 
 
