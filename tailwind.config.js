@@ -8,7 +8,9 @@ module.exports = {
     // Other Tailwind CSS configurations...
   
   theme: {
-    extend: {},
+    extend: {
+      borderOpacity: ['active']
+    },
   },
   plugins: [],
 };

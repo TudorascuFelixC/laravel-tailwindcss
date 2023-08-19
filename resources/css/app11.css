@@ -3,25 +3,6 @@
 @tailwind utilities;
 
 
-/********************CHOOSE THE PLAN WHICH SUITS YOU BEST  START**********************/
-.rounded-custom {
-    border-radius: 30px;
-  }
-
-.centered-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh; /* Adjust the height as needed */
-}
-
-/* Style the h1 element within the centered div */
-.centered-div h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-}
-
 /*************************************************************/
 /* Style the buttons */
 /* Style the buttons */
