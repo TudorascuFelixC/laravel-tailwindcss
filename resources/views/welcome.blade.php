@@ -13,13 +13,16 @@
 
 <!---------------------------------------------------- NAVBAR ------------------------------------------->
 
-<div1 class="flex flex-col items-center justify-center">
-  <nav3 class="flex  h-16  bg-blue-500 bg-opacity-70 z-20 w-full">
-    <div2 class="flex flex-row flex-grow justify-center gap-10 text-1xl text-white z-50 mt-2">
-      <a href='#' class=" hover:text-gray-950 px-3 py-2 text-sm font-bold">About us</a>
-      <a href='#' class=" hover:text-gray-950 px-3 py-2 text-sm font-bold">Subscriptions</a>
-      <a href='#' class=" hover:text-gray-950 px-3 py-2 text-sm font-bold">Download</a>
-      <a href='#' class=" hover:text-gray-950 px-3 py-2 text-sm font-bold">Contact us</a>
+<div1 class="flex flex-col items-center w-full justify-center fixed z-20">
+  <nav3 class="flex  h-20  bg-blue-500 bg-opacity-70 w-full ">
+  <div class="flex pl-8">
+    <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
+  </div>
+    <div2 class="flex flex-row flex-grow justify-center gap-10 text-2xl font-semibold text-white z-50 mt-2">
+      <a href='#' class=" hover:text-gray-950 px-3 py-2  ">About us</a>
+      <a href='#' class=" hover:text-gray-950 px-3 py-2  ">Subscriptions</a>
+      <a href='#' class=" hover:text-gray-950 px-3 py-2  ">Download</a>
+      <a href='#' class=" hover:text-gray-950 px-3 py-2  ">Contact us</a>
       </div2>
       <div3 class="flex mt-2  ml-10 text-white">
       <a href='#' class=" hover:text-gray-950 px-3 py-2 text-sm font-bold" id="loginin-btn">Login</a>
@@ -59,10 +62,6 @@
 <!----------------------------------------------------------------------------------------------------------->
 
 <div class="flex w-full h-auto bg-cover bg-center bg-no-repeat bg-slate-800 relative" style="background-image: url('/photos/AdobeStock_606546933.jpeg');">
-
-  <div class="flex pt-8 pl-8">
-    <img id="home-btn" class="h-20 w-20px" src="photos/EzePostLogo.svg" alt="Logo">
-  </div>
 
   <div class="flex flex-row">
   <div class="flex flex-col justify-center items-center h-full pt-60 pb-24">
@@ -164,9 +163,8 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 
 
-
+<div class="bg-slate-100">
 <div class="flex items-center justify-center mt-12 mb-6 text-4xl font-bold">Choose the plan which suits you best</div>
-
 <div class="flex flex-row items-center justify-center">
   <!-- Personal button -->
   <button class="border rounded-lg border-violet-600 p-2 pr-2 buttonss-personal-business personal active" onclick="toggleButtons('personal')">Personal</button>
@@ -191,11 +189,11 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 
 <!-- Div container for the headings -->
-<div class="flex justify-between mt-2">
-  <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div class="flex justify-between mt-14 pl-8 pr-8">
+  <div class="flex items-center justify-center w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div class="flex flex-col item-center justify-center ml-8">
       <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan 1</h5>
-        <p class="text-white text-5xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
+        <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
         <ul role="list" class="space-y-5 my-7">
             <li class="flex space-x-3 items-center">
                 <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -248,7 +246,7 @@ document.getElementById('signup-btn').addEventListener('click', function() {
     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div class="flex flex-col item-center justify-center ml-8">
       <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan 2</h5>
-        <p class="text-white text-5xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span id="periodText2">xxx</span></p>
+        <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span id="periodText2">xxx</span></p>
         <ul role="list" class="space-y-5 my-7">
             <li class="flex space-x-3 items-center">
                 <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -301,7 +299,7 @@ document.getElementById('signup-btn').addEventListener('click', function() {
     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div class="flex flex-col item-center justify-center ml-8">
       <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan 3</h5>
-      <p class="text-white text-5xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span id="periodText3">xxx</span></p>
+      <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span id="periodText3">xxx</span></p>
       <ul role="list" class="space-y-5 my-7">
             <li class="flex space-x-3 items-center">
                 <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -481,38 +479,65 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 <!------------------------------------------------------------------>
 
-<div class="footer-container text-black py-4 border mt-8">
-  <div class="footer max-w-7xl mx-auto px-4 flex justify-around">
-    <div class="footer-section flex flex-col items-center">
-      <h1 class="footer-heading text-2xl font-bold mb-4">Company</h1>
-      <ul class="footer-list">
-        <li><a href="/register" class="text-black">About Us</a></li>
-        <li><a href="#" class="text-black">Contact Us</a></li>
-        <li><a href="#" class="text-black">Help</a></li>
-      </ul>
+
+<footer class="bg-white dark:bg-gray-900 mt-32">
+    <div class="mx-auto w-full max-w-screen-xl ">
+      <div class="grid grid-cols-2 gap-40 px-20 py-4 lg:py-10 md:grid-cols-3">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline">About us</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact us</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline">Apple</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+</ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Subscriptions</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Personal</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Business</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Yearly</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Monthly</a>
+                </li>
+            </ul>
+        </div>
+        
     </div>
-    <div class="footer-section flex flex-col items-center">
-      <h1 class="footer-heading text-2xl font-bold mb-4">Download</h1>
-      <ul class="footer-list">
-        <li class="text-black">Apple</li>
-        <li class="text-white">Windows</li>
-        <li class="text-white">iOS</li>
-        <li class="text-white">Android</li>
-      </ul>
+    <div class="flex items-center justify-center px-2 py-2 ">
+        <span class=" text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="#">EzePost</a>. All Rights Reserved.
+        </span>
     </div>
-    <div class="footer-section flex flex-col items-center">
-      <h1 class="footer-heading text-2xl font-bold mb-4">Subscriptions</h1>
-      <ul class="footer-list">
-        <li class="text-white">Personal</li>
-        <li class="text-white">Business</li>
-        <li class="text-white">Yearly</li>
-        <li class="text-white">Monthly</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="footer-copy text-white py-2 text-center pt-7">
-  <p class="text-xs font-bold">Copyright&copy; 2023 EZEPOST.com</p>
+</footer>
 </div>
 
 </body>
