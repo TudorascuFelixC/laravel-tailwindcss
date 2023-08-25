@@ -25,41 +25,44 @@
   <div class="flex h-screen">
 
     <!-- Registration Form Container -->
-    <div class="flex flex-1 items-center justify-center pl-20 pr-80">
-        <div class="bg-white p-10 shadow-md rounded-lg w-96">
-            <h1 class="text-4xl font-bold mb-10 text-center">REGISTER</h1>
-            
-            <!-- Form Elements -->
-            <div class="mb-8 border border-gray-300 rounded-md">
-                <input type="email" class="w-full p-4" placeholder="Email">
-            </div>
-            <div class="mb-8 border border-gray-300 rounded-md">
-                <input type="password" class="w-full p-4" placeholder="Password">
-            </div>
-            <div class="mb-8 border border-gray-300 rounded-md">
-                <input type="password" class="w-full p-4" placeholder="Repeat Password">
-            </div>
-            
-            <!-- Additional Links and Button -->
-            <h4 class="mb-6 text-right text-gray-400">Forgot password?</h4>
-            <button class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-4 rounded-md">Sign up</button>
+    <div class="flex flex-1 items-center justify-center pl-20 pr-100">
+       o,  
+      <div class="bg-white p-10 shadow-md rounded-lg w-96">
+        <h1 class="text-4xl font-bold mb-10 text-center">REGISTER</h1>
+
+        <!-- Form Elements -->
+        <div class="mb-8 border border-gray-300 rounded-md">
+          <input type="email" class="w-full p-4" placeholder="Email">
         </div>
+        <div class="mb-8 border border-gray-300 rounded-md">
+          <input type="password" class="w-full p-4" placeholder="Password">
+        </div>
+        <div class="mb-8 border border-gray-300 rounded-md">
+          <input type="password" class="w-full p-4" placeholder="Repeat Password">
+        </div>
+
+        <!-- Additional Links and Button -->
+        <h4 class="mb-6 text-right text-gray-400">Forgot password?</h4>
+        <button
+          class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-4 rounded-md">Sign
+          up</button>
+      </div>
     </div>
 
     <!-- Image and Sign-in Section -->
     <div class="bg-white-300 flex-1 flex relative text-white-800">
-        <!-- Image -->
-        <img src="/photos/AdobeStock_606546933.png" alt="Image" class="object-cover h-full w-full">
+      <!-- Image -->
+      <img src="/photos/AdobeStock_606546933.png" alt="Image" class="object-cover h-full w-full">
 
-        <!-- Centered Text and Button -->
-        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-            <span class="text-white text-3xl font-bold mb-4">Already have an account?</span>
-            <button id="login-btn" class="w-40 p-2 md:p-4 rounded-full bg-white">
-                <span class="text-black font-bold md:text-base">Sign in</span>
-            </button>
-        </div>
+      <!-- Centered Text and Button -->
+      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+        <span class="text-white text-3xl font-bold mb-4">Already have an account?</span>
+        <button id="login-btn" class="w-40 p-2 md:p-4 rounded-full bg-white">
+          <span class="text-black font-bold md:text-base">Sign in</span>
+        </button>
+      </div>
     </div>
-</div>
+  </div>
 
   <!---Scripts only--->
 
