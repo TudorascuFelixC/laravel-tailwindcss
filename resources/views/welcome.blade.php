@@ -160,9 +160,6 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 </div>
 <!----------------------------------------------------------------------------------------------------------->
 
-
-
-
 <div class="bg-slate-100">
 <div class="flex items-center justify-center mt-12 mb-6 text-4xl font-bold">Choose the plan which suits you best</div>
 <div class="flex flex-row items-center justify-center">
@@ -359,118 +356,71 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 <script>
 
-  let activeButton = 'personal'; // Initialize activeButton
-  let price1 = document.getElementById('priceText1');
-  let price2 = document.getElementById('priceText2');
-  let price3 = document.getElementById('priceText3');
-  let period1 = document.getElementById('periodText1');
-  let period2 = document.getElementById('periodText2');
-  let period3 = document.getElementById('periodText3');
+let activeButton = 'personal'; // Initialize activeButton
 
-  if(activeButton == 'personal'){
-    price1.innerHTML = '£129';
-    price2.innerHTML = '£159';
-    price3.innerHTML = '£199';
-    if(document.getElementById('periodInput').checked){
-      period1.innerHTML = 'month';
-      period2.innerHTML = 'month';
-      period3.innerHTML = 'month';
-    }else{
-    period1.innerHTML = 'year';
-    period2.innerHTML = 'year';
-    period3.innerHTML = 'year';
+let price1 = document.getElementById('priceText1');
+let price2 = document.getElementById('priceText2');
+let price3 = document.getElementById('priceText3');
+let period1 = document.getElementById('periodText1');
+let period2 = document.getElementById('periodText2');
+let period3 = document.getElementById('periodText3');
+
+function setPricesForActiveButton() {
+    if (activeButton === 'business') {
+        price1.innerHTML = '£129';
+        price2.innerHTML = '£159';
+        price3.innerHTML = '£199';
+    } else { // 'personal'
+        price1.innerHTML = '£99';
+        price2.innerHTML = '£129';
+        price3.innerHTML = '£159';
     }
-  }else{
-    price1.innerHTML = '£99';
-    price2.innerHTML = '£129';
-    price3.innerHTML = '£159';
-    if(document.getElementById('periodInput').checked){
-      period1.innerHTML = 'month';
-      period2.innerHTML = 'month';
-      period3.innerHTML = 'month';
-    }else{
-    period1.innerHTML = 'year';
-    period2.innerHTML = 'year';
-    period3.innerHTML = 'year';
-    }
-  }
+}
 
-  //add event listener to the switch
-  document.getElementById('periodInput').addEventListener('click', function() {
-    if(document.getElementById('periodInput').checked){
-      period1.innerHTML = 'month';    
-      period2.innerHTML = 'month';
-      period3.innerHTML = 'month';  
-    }else{
-      period1.innerHTML = 'year';
-      period2.innerHTML = 'year';
-      period3.innerHTML = 'year';      
-    }
-  });
+function setPeriodForActiveToggle() {
+    const periodText = document.getElementById('periodInput').checked ? 'month' : 'year';
+    period1.innerHTML = periodText;
+    period2.innerHTML = periodText;
+    period3.innerHTML = periodText;
+}
 
- 
+// Initialize prices and periods on page load
+setPricesForActiveButton();
+setPeriodForActiveToggle();
 
-  // Your existing toggleButtons function
-  function toggleButtons(button) {
+// Update periods on toggle change
+document.getElementById('periodInput').addEventListener('click', function() {
+    setPeriodForActiveToggle();
+});
+
+function toggleButtons(button) {
+    // Update activeButton only if a different button is clicked
     if (activeButton !== button) {
-      activeButton = button;
-    } else {
-      // If the same button is clicked again, toggle its active state
-      activeButton = activeButton === 'personal' ? 'business' : 'personal';
+        activeButton = button;
+
+        const buttons = document.querySelectorAll('.buttonss-personal-business');
+        buttons.forEach(btn => {
+            btn.classList.remove('active', 'inactive'); // You can remove multiple classes by separating with comma
+        });
+
+        const activeButtonElement = document.querySelector(`.${activeButton}`);
+        activeButtonElement.classList.add('active');
+
+        const inactiveButtonElement = document.querySelector(`.${activeButton === 'business' ? 'personal' : 'business'}`);
+        inactiveButtonElement.classList.add('inactive');
+
+        // Handle the prices and periods
+        setPricesForActiveButton();
+        setPeriodForActiveToggle();
+
+        // Show the corresponding heading
+        const helloHeadings = document.querySelectorAll('.hello-heading');
+        helloHeadings.forEach((heading) => {
+            heading.style.display = 'none';
+        });
     }
+}
 
-
-    const buttons = document.querySelectorAll('.buttonss-personal-business');
-    buttons.forEach((button) => {
-      button.classList.remove('active');
-      button.classList.remove('inactive'); // Remove 'inactive' class from all buttons
-    });
-
-    const activeButtonElement = document.querySelector(`.${activeButton}`);
-    activeButtonElement.classList.add('active');
-
-    const inactiveButtonElement = document.querySelector(`.${activeButton === 'business' ? 'personal' : 'business'}`);
-    inactiveButtonElement.classList.add('inactive');
-
-    // Show the corresponding heading
-    const helloHeadings = document.querySelectorAll('.hello-heading');
-    helloHeadings.forEach((heading) => {
-      heading.style.display = 'none';
-    });
-
-    console.log(activeButton);
-
-    if(activeButton == 'business'){
-      price1.innerHTML = '£129';
-      price2.innerHTML = '£159';
-      price3.innerHTML = '£199';
-      if(document.getElementById('periodInput').checked){
-        period1.innerHTML = 'month';
-        period2.innerHTML = 'month';
-        period3.innerHTML = 'month';
-      }else{
-      period1.innerHTML = 'year';
-      period2.innerHTML = 'year';
-      period3.innerHTML = 'year';
-      }
-    }
-    if(activeButton == 'personal'){
-      price1.innerHTML = '£99';
-      price2.innerHTML = '£129';
-      price3.innerHTML = '£159';
-      if(document.getElementById('periodInput').checked){
-        period1.innerHTML = 'month';
-        period2.innerHTML = 'month';
-        period3.innerHTML = 'month';
-      }else{
-      period1.innerHTML = 'year';
-      period2.innerHTML = 'year';
-      period3.innerHTML = 'year';
-      }
-    }
-
-
-  }
 
 
 
