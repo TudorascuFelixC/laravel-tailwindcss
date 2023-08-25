@@ -354,9 +354,10 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 <!------------------------------------------------------------------>
 
-<script>
+<!---Script for the Personal and Business buttons. AM.--->
+<script> 
 
-let activeButton = 'personal'; // Initialize activeButton
+let activeButton = 'personal';
 
 let price1 = document.getElementById('priceText1');
 let price2 = document.getElementById('priceText2');
@@ -420,13 +421,8 @@ function toggleButtons(button) {
         });
     }
 }
-
-
-
-
-  </script>
-
-
+</script>
+<!---End Script for the Personal and Business buttons. AM.--->
 <!------------------------------------------------------------------>
 
 
