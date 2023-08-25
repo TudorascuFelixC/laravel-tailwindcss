@@ -351,8 +351,6 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 
   </div>
-  
-<!--------------------------------------------------------------->
 
 <!------------------------------------------------------------------>
 
@@ -381,7 +379,7 @@ function setPricesForActiveButton() {
 }
 
 function setPeriodForActiveToggle() {
-    const periodText = document.getElementById('periodInput').checked ? 'month' : 'year';
+    const periodText = document.getElementById('periodInput').checked ? 'year' : 'month';
     period1.innerHTML = periodText;
     period2.innerHTML = periodText;
     period3.innerHTML = periodText;
@@ -425,6 +423,7 @@ function toggleButtons(button) {
 }
 </script>
 <!---End Script for the Personal and Business buttons. AM.--->
+
 <!------------------------------------------------------------------>
 
 
