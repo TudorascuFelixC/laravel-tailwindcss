@@ -71,7 +71,9 @@
     
     <!-- Text "Already have an account?" -->
     <div class="mt-6 p-4 rounded-md flex justify-center items-center absolute top-[70%] left-1/2 transform -translate-x-1/2">
-        <span class="text-white text-3xl font-bold z-9999">Already have an account?</span>
+
+        <span class="text-white text-3xl font-bold z-10">Already have an account?</span>
+
     </div>
     
     <!-- White button with "Sign in" text -->
