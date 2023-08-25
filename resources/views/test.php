@@ -5,33 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Main Page</title>
-  @vite('resources/css/app.css') <!--DO NOT DELETE -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-  <link href="app.css" rel="stylesheet">
 </head>
-<body class="flex">
-  
+<body>
+
+<div1 class="flex flex-col items-center w-full justify-center fixed z-20">
+  <nav3 class="flex  h-20  w-full ">
+  <div class="flex pl-8">
+    <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
+  </div>  
+  </nav3>
+</div1>
+
+
+
+
+
+  <script>
+    document.getElementById('loginin-btn').addEventListener('click', function() {
+        window.location.href = "/login"; 
+    });
+</script>
+
+  <script>
+  document.getElementById('loginin-btn').addEventListener('click', function() {
+    // Use AJAX to fetch the content of the new page
+    fetch('{{ route('login') }}')
+      .then(response => response.text())
+      .then(data => {
+        // Update the content of the page-container with the fetched data
+        document.getElementById('pagelogin-render').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error fetching the login page:', error);
+      });
+  });
+</script>
+
+
+
+
+<!----------------------------------------------------------------------------------------------------------->
 
 <!-- LEFT SIDE DIV -->
-<div class="background-photo left-side">
-    <img src="photos/EzePostLogo.svg" alt="EzePost Logo" class="h-20 w-20px ml-2 mr-30 mb-40">
-    <nav class="space-y-4 ml-2 mr-30 mt-2 mb-80 items-center">
-      <a href="#" class="block text-blue-500">Dashboard</button>
-      <a href="#" class="block text-blue-500">Contacts</a>
-      <a href="#" class="block text-blue-500">Packages</a>
-      <a href="#" class="block text-blue-500">Plans</a>
-      <hr class="my-10 border-t border-gray-300">
-      <a href="#" class="block text-blue-500">Settings</a>
-      <a href="#" class="block text-blue-500">Log Out</a>
-    </nav>
-  </div>
 
+ 
 
 <!-- RIGHT SIDE DIV -->
 <div class="right-side flex-1 p-2 pl-20 pr-20">
 
 <div class="flex items-center justify-between mt-2 pb-20"> <!-- Adjust the pt value to move it more to the top -->
-  <h1 class="text-black font-bold text-4xl">Plans</h1>
   <div class="flex items-center space-x-4">
     <div class="rounded-full bg-gray-500 w-6 h-6 flex items-center justify-center">
       <span class="text-white font-bold">?</span>

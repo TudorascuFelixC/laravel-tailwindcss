@@ -13,8 +13,8 @@
 
 <!---------------------------------------------------- NAVBAR ------------------------------------------->
 
-<div1 class="flex flex-col items-center w-full justify-center fixed z-20">
-  <nav3 class="flex  h-20  bg-blue-500 bg-opacity-70 w-full ">
+<div class="flex flex-col items-center w-full justify-center fixed z-20">
+  <nav class="flex  h-20  bg-blue-500 bg-opacity-70 w-full ">
   <div class="flex pl-8">
     <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
   </div>
@@ -25,11 +25,11 @@
       <a href='#' class=" hover:text-gray-950 px-3 py-2  ">Contact us</a>
       </div2>
       <div3 class="flex mt-2  ml-10 text-white">
-      <a href='#' class=" hover:text-gray-950 px-3 py-2 text-sm font-bold" id="loginin-btn">Login</a>
+      <a href='#' class="text-2xl hover:text-gray-950 px-3 py-2 font-bold" id="loginin-btn">Login</a>
       </div3>
     
-  </nav3>
-</div1>
+  </nav>
+</div>
 
 <!-- Your login page content END here ---------------------------------------------------------------------------------------------------------->
 
@@ -78,7 +78,7 @@
 
     <!-- Aligned to the right -->
     <div class="flex justify-end items-end mt-8 ml-8 mb-10">
-      <button id="login-btn" class="px-5 py-2 text-white border-2 rounded-lg" style="background-image: linear-gradient(0deg, #4C6C93, #4C6C93)">Sign up</button>
+      <button id="signup-btn" class="px-5 py-2 text-white border-2 rounded-lg" style="background-image: linear-gradient(0deg, #4C6C93, #4C6C93)">Sign up</button>
     </div>
     </div>
 
@@ -92,6 +92,8 @@ document.getElementById('signup-btn').addEventListener('click', function() {
     window.location.href = "{{ route('register') }}";
 });
 </script>
+
+
 <!----------------------------------------------------------------------------------------------------------->
 <div class="flex justify-center items-center">
 <div class="flex flex-col justify-center items-center mt-10 px-4 w-1/3 text-black">
@@ -481,7 +483,7 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 
 
 <footer class="bg-white dark:bg-gray-900 mt-32">
-    <div class="mx-auto w-full max-w-screen-xl ">
+    <div class="mx-auto w-full max-w-screen-xl pl-28">
       <div class="grid grid-cols-2 gap-40 px-20 py-4 lg:py-10 md:grid-cols-3">
         <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>

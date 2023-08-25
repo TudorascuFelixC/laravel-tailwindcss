@@ -11,20 +11,43 @@
 <body>
 
 
-<!-- Navbar Logo -->
+<div1 class="flex flex-col items-center w-full justify-center fixed z-20">
+  <nav3 class="flex  h-20  w-full ">
+  <div class="flex pl-8">
+    <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
+  </div>  
+  </nav3>
+</div1>
 
 
-<div class="flex h-screen test">
 
-    <!-- Left-side content -->
-    <div class="bg-white-300 flex-1 flex relative text-white-800"> <!-- Increase left padding -->
-        <!-- Logo on top of the image -->
-        <div class="absolute left-0 flex items-center pt-20 pl-20">
-            <img class="h-20 w-20" src="photos/EzePostLogo.svg" alt="Logo">
-        </div>
 
-       
-</div>
+
+  <script>
+    document.getElementById('loginin-btn').addEventListener('click', function() {
+        window.location.href = "/login"; 
+    });
+</script>
+
+  <script>
+  document.getElementById('loginin-btn').addEventListener('click', function() {
+    // Use AJAX to fetch the content of the new page
+    fetch('{{ route('login') }}')
+      .then(response => response.text())
+      .then(data => {
+        // Update the content of the page-container with the fetched data
+        document.getElementById('pagelogin-render').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error fetching the login page:', error);
+      });
+  });
+</script>
+
+
+
+
+<!----------------------------------------------------------------------------------------------------------->
 
 
 

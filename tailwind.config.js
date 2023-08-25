@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-      './resources/**/*.blade.php', // Include Blade template files
-      './resources/**/*.js',        // Include JavaScript files
-      './resources/**/*.vue',       // Include Vue.js files
-    ],
-    // Other Tailwind CSS configurations...
-  
-  theme: {
-    extend: {
-      borderOpacity: ['active']
+export const content = [
+  './resources/**/*.blade.php',
+  './resources/**/*.js',
+  './resources/**/*.vue', // Include Vue.js files
+];
+export const theme = {
+  extend: {
+    borderOpacity: ['active'],
+    backgroundImage: {
+      'my': 'url("/photos/AdobeStock_606546933.png")'
     },
   },
-  plugins: [],
 };
+export const plugins = [];
