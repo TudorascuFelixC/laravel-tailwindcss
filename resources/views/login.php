@@ -68,7 +68,7 @@
   </div>
   </div>
 
-  <!---All Scripts to the bottom--->
+  <!---Scripts to the bottom.--->
 
   <script>
     document.getElementById('loginin-btn').addEventListener('click', function () {
