@@ -23,25 +23,26 @@
   <div class="flex h-screen">
 
     <!-- Left-side content -->
-    <div class="bg-white-300 flex-1 flex relative text-white-800"> <!-- Increase left padding -->
-      <!-- Logo on top of the image -->
+    <div class="bg-white-300 flex-1 flex relative text-white-800">
 
-      <!-- Text "Not registered yet?" -->
+      <!-- Image on the top left side of the container -->
+      <img src="/photos/AdobeStock_606546933.jpeg" alt="Image" class="absolute top-0 left-0 object-cover h-screen"
+        style="width: 50vw;">
+
+      <!-- Centered content: "Not registered yet?" text and the signup button -->
       <div
-        class="mt-6 p-10 rounded-md flex justify-center items-center absolute top-[70%] left-1/2 transform -translate-x-1/2">
-        <span class="text-white text-3xl font-bold z-9999">Not registered yet ?</span>
+        class="flex flex-col items-center justify-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="mt-6 p-5 rounded-md">
+          <span class="text-white text-3xl font-bold z-9999">Not registered yet?</span>
+        </div>
+
+        <button id="signup-btn" class="w-40 mt-6 md:mt-8 p-2 md:p-4 rounded-full bg-white">
+          <span class="text-black font-bold text-sm md:text-base">Signup</span>
+        </button>
       </div>
 
-      <!-- White button with "Sign up" text -->
-      <button id="signup-btn"
-        class="w-40 sm:mt-6 md:mt-8 p-2 md:p-4 rounded-full flex justify-center items-center absolute md:top-[80%] top-[75%] left-1/2 transform -translate-x-1/2 bg-white">
-        <span class="text-black font-bold text-sm md:text-base">Signup</span>
-      </button>
-
-      <!-- Image on the left side -->
-      <img src="/photos/AdobeStock_606546933.jpeg" alt="Image" class="object-cover h-screen"
-        style="width: 50vw; height: 100vh">
     </div>
+
 
     <!-- Right-side content -->
     <div class="flex h-screen items-center justify-center pr-80"> <!-- Increase left padding -->
