@@ -26,7 +26,6 @@
 
     <!-- Registration Form Container -->
     <div class="flex flex-1 items-center justify-center pl-20 pr-100">
-       o,  
       <div class="bg-white p-10 shadow-md rounded-lg w-96">
         <h1 class="text-4xl font-bold mb-10 text-center">REGISTER</h1>
 
