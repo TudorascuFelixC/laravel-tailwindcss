@@ -163,13 +163,15 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 <!----------------------------------------------------------------------------------------------------------->
 
 <div class="bg-slate-100">
-<div class="flex items-center justify-center mt-12 mb-6 text-4xl font-bold">Choose the plan which suits you best</div>
-<div class="flex flex-row items-center justify-center">
-  <!-- Personal button -->
-  <button class="border rounded-lg border-violet-600 p-2 pr-2 buttonss-personal-business personal active" onclick="toggleButtons('personal')">Personal</button>
-  <!-- Business button -->
-  <button class="border rounded-lg border-violet-600 p-2 pr-2 buttonss-personal-business business" onclick="toggleButtons('business')">Business</button>
+  <div class="flex items-center justify-center mt-12 mb-6 text-4xl font-bold">Choose the plan which suits you best</div>
+  <div class="flex flex-row items-center justify-center">
+    <!-- Personal button -->
+    <button class="border rounded-lg border-violet-600 p-2 pr-2 mr-4 buttonss-personal-business personal active" onclick="toggleButtons('personal')">Personal</button>
+    <!-- Business button -->
+    <button class="border rounded-lg border-violet-600 p-2 pr-2 buttonss-personal-business business" onclick="toggleButtons('business')">Business</button>
+  </div>
 </div>
+
 
 <div class="flex items-center justify-center space-x-4 pt-2 pb-4">
   <!-- Left side heading -->
