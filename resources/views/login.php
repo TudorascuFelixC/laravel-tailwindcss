@@ -45,25 +45,32 @@
 
 
     <!-- Right-side content -->
-    <div class="flex h-screen items-center justify-center pr-80"> <!-- Increase left padding -->
-      <div class="bg-white p-10 shadow-md rounded-lg w-96">
+<div class="flex h-screen items-center justify-center bg-gray-100 flex-1">
+    <div class="bg-white p-10 shadow-md rounded-lg w-96">
         <!-- Increase font size of the heading -->
         <h1 class="text-4xl font-bold mb-10 text-center">Login</h1>
-        <!-- Increase padding and margin to create more space between form elements -->
+
+        <!-- Form elements -->
         <div class="mb-8 border border-gray-300 rounded-md">
-          <input type="email" class="w-full p-4" placeholder="Email">
+            <input type="email" class="w-full p-4" placeholder="Email">
         </div>
         <div class="mb-8 border border-gray-300 rounded-md">
-          <input type="password" class="w-full p-4" placeholder="Password">
+            <input type="password" class="w-full p-4" placeholder="Password">
         </div>
 
-        <!-- Apply the same styles to "Forgot password?" as "Repeat Password" -->
+        <!-- Forgot password text -->
         <h4 class="mb-6 text-right text-gray-400">Forgot password?</h4>
-        <!-- Increase font size and padding of the button -->
-        <button class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-4 rounded-md">Log
-          in</button>
-      </div>
+
+        <!-- Login button -->
+        <button class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-4 rounded-md">Log in</button>
     </div>
+</div>
+
+
+
+
+  </div>
+
   </div>
 
   <!---All Scripts to the bottom--->
