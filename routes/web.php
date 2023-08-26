@@ -32,3 +32,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard'); // Define the named route "dashboard" here
 
+Route::get('/usersubscription', function () {
+    return view('usersubscription');
+})->name('usersubscription'); // Define the named route "userprofile" here
+
