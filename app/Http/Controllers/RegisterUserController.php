@@ -8,7 +8,11 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterUserController extends Controller
 {
-    // ...
+    // Show the registration form
+    public function showRegistrationForm()
+    {
+        return view('register');
+    }
 
     // Handle the registration request
     public function register(Request $request)
