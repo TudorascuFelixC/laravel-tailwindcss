@@ -23,25 +23,25 @@
 <body class="m-0 p-0">
     <!----- NAVBAR ----->
     <div class="flex flex-col items-center w-full justify-center fixed z-20">
-        <nav class="flex  h-20  bg-blue-500 bg-opacity-70 w-full ">
-            <div class="flex pl-8">
-                <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
-            </div>
-            <div class="flex flex-row flex-grow justify-center gap-10 text-2xl font-semibold text-white z-50 mt-2">
-            <a href='#' class=" hover:text-gray-950 px-3 py-2  ">About us</a>
-            <a href='#subscription' class=" hover:text-gray-950 px-3 py-2  ">Subscriptions</a>
-            <a href='#' class=" hover:text-gray-950 px-3 py-2  ">Download</a>
-            <a href='#' class=" hover:text-gray-950 px-3 py-2  ">Contact us</a>
-            </div>
-            <div class="flex mt-2  ml-10 text-white">
+    <nav class="flex items-center justify-center h-20 bg-blue-500 bg-opacity-70 w-full transition-all duration-500">
+        <div class="flex pl-8">
+            <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
+        </div>
+        <div class="flex flex-row flex-grow justify-center gap-10 text-2xl font-semibold text-white z-50">
+            <a href='#' class=" hover:text-gray-950 px-3 py-2">About us</a>
+            <a href='#subscription' class=" hover:text-gray-950 px-3 py-2">Subscriptions</a>
+            <a href='#' class=" hover:text-gray-950 px-3 py-2">Download</a>
+            <a href='#' class=" hover:text-gray-950 px-3 py-2">Contact us</a>
+        </div>
+        <div class="flex ml-10 text-white">
             <a href='#' class="text-2xl hover:text-gray-950 px-3 py-2 font-bold" id="loginin-btn">Login</a>
-            </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
+
 
     <!----- SECTION 1 ----->
     <div class="flex w-full h-auto bg-cover bg-center bg-no-repeat bg-slate-800 relative" style="background-image: url('/photos/AdobeStock_606546933.jpeg');">
-    < class="flex flex-row">
         <div class="flex flex-col justify-center items-center h-full pt-60 pb-24">
             <h1 class="text-7xl font-bold text-white">Ultimate file transfers</h1>
             <div class="text-white overflow-hidden mt-5" style="max-height: calc(1em * 1.25 * 8); line-height: 1.25;">
@@ -382,11 +382,24 @@
     </footer>
 
 
-    <!----- SCRIPTS ONLY ----->
+<!----- SCRIPTS ONLY ----->
 <script>
     document.getElementById('loginin-btn').addEventListener('click', function() {
         window.location.href = "/login"; // 
     });
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('nav');
+    if (window.pageYOffset > 50) {
+        navbar.classList.remove('h-20');
+        navbar.classList.add('h-10');
+    } else {
+        navbar.classList.add('h-20');
+        navbar.classList.remove('h-10');
+    }
+});
 </script>
 
 <script>
