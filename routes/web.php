@@ -1,14 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterUserController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register'); // Define the named route "register" here
+Route::get('/register', [RegisterUserController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterUserController::class, 'register'])->name('register.submit');
+// Route::get('/register', function () {
+//     return view('register');
+// })->name('register'); // Define the named route "register" here
 
 
 Route::get('/login', function () {

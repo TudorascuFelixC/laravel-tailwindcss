@@ -14,13 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vepost_user', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->bigIncrements('id');
             $table->string('username');
             $table->string('vepost_addr');
             $table->string('password');
             $table->string('displayname')->nullable();
             $table->string('controlstring')->default('00000000000000000000');
-            $table->decimal('balance', 10)->default(0);
+            $table->decimal('balance', 10, 2)->default(0); // Added scale of 2 for decimal.
             $table->string('vepost_counter')->default('10');
             $table->string('status')->default('0');
             $table->string('free_send_left')->nullable();
