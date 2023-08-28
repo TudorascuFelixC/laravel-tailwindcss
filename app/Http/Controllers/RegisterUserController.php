@@ -28,6 +28,7 @@ class RegisterUserController extends Controller
         // Create the user
         $user = new VepostUser();
         $user->username = $data['username'];
+        $user->displayname = $data['displayname'];
         $user->vepost_addr = $this->generateVepostAddr(); // Set random vepost_addr
         $user->password = Hash::make($data['password']); // Hash the password
         if (isset($data['displayname'])) {

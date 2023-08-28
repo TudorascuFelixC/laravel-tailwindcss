@@ -36,6 +36,13 @@
                     </div>
 
                     <div class="mb-8 border border-gray-300 rounded-md">
+                        <input type="text" id='displayname' name="displayname" class="w-full p-4" placeholder="Your Display Name" value="{{ old('displayname') }}">
+                        @if ($errors->has('displayname'))
+                            <span class="text-red-500 text-sm">{{ $errors->first('displayname') }}</span>
+                        @endif
+                    </div>
+
+                    <div class="mb-8 border border-gray-300 rounded-md">
                         <input type="password" name="password" class="w-full p-4" placeholder="Password">
                         @if ($errors->has('password'))
                             <span class="text-red-500 text-sm">{{ $errors->first('password') }}</span>
