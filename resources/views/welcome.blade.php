@@ -1,11 +1,13 @@
 <!doctype html>
-<html>
+<htm  
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <m  a name="viewport"ontent="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Main Page</title>
-  @vite('resources/css/app.css') <!--DO NOT DELETE -->
+  @vite('resources/css/app.css') <!-
+
+-DO NOT DELETE -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="m-0 p-0">
@@ -193,7 +195,7 @@ document.getElementById('signup-btn').addEventListener('click', function() {
 <div class="flex justify-between mt-14 pl-8 pr-8">
   <div class="flex items-center justify-center w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div class="flex flex-col item-center justify-center ml-8">
-      <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan 1</h5>
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan 1</h5>
         <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
         <ul role="list" class="space-y-5 my-7">
             <li class="flex space-x-3 items-center">
@@ -242,7 +244,7 @@ document.getElementById('signup-btn').addEventListener('click', function() {
         </ul>
       <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
 </div>
-    </div>
+</div>
 
     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div class="flex flex-col item-center justify-center ml-8">
