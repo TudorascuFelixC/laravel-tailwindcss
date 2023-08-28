@@ -11,27 +11,22 @@
 </head>
 
 <body>
-
-  <div1 class="flex flex-col items-center w-full justify-center fixed z-20">
-    <nav3 class="flex  h-20  w-full ">
+  <div class="flex flex-col items-center w-full justify-center fixed z-20">
+    <nav class="flex  h-20  w-full ">
       <div class="flex pl-8">
         <img id="home-btn" class="h-30 w-24" src="photos/EzePostLogo.svg" alt="Logo">
       </div>
-    </nav3>
-  </div1>
+    </nav>
+  </div>
 
   <div class="flex h-screen">
-
     <!-- Left-side content -->
     <div class="bg-white-300 flex-1 flex relative text-white-800">
-
       <!-- Image on the top left side of the container -->
       <img src="/photos/AdobeStock_606546933.jpeg" alt="Image" class="absolute top-0 left-0 object-cover h-screen"
         style="width: 50vw;">
-
       <!-- Centered content: "Not registered yet?" text and the signup button -->
-      <div
-        class="flex flex-col items-center justify-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="flex flex-col items-center justify-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div class="mt-6 p-5 rounded-md">
           <span class="text-white text-3xl font-bold z-9999">Not registered yet?</span>
         </div>
@@ -40,7 +35,6 @@
           <span class="text-black font-bold text-sm md:text-base">Signup</span>
         </button>
       </div>
-
     </div>
 
     <!-- Right-side content -->
@@ -49,23 +43,30 @@
         <!-- Increase font size of the heading -->
         <h1 class="text-4xl font-bold mb-10 text-center">Login</h1>
 
-        <!-- Form elements -->
-        <div class="mb-8 border border-gray-300 rounded-md">
-          <input type="email" class="w-full p-4" placeholder="Email">
-        </div>
-        <div class="mb-8 border border-gray-300 rounded-md">
-          <input type="password" class="w-full p-4" placeholder="Password">
-        </div>
+        <!-- Form Start -->
+        <form action="{{ route('login') }}" method="post">
+          @csrf
 
-        <!-- Forgot password text -->
-        <h4 class="mb-6 text-right text-gray-400">Forgot password?</h4>
+          <!-- Username input -->
+          <div class="mb-8 border border-gray-300 rounded-md">
+            <input type="text" id="username" name="username" class="w-full p-4" placeholder="Username">
+          </div>
 
-        <!-- Login button -->
-        <button class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-4 rounded-md">Log
-          in</button>
+          <!-- Password input -->
+          <div class="mb-8 border border-gray-300 rounded-md">
+            <input type="password" name="password" class="w-full p-4" placeholder="Password">
+          </div>
+
+          <!-- Forgot password text -->
+          <h4 class="mb-6 text-right text-gray-400">Forgot password?</h4>
+
+          <!-- Login button -->
+          <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-4 rounded-md">Log in</button>
+
+        </form>
+        <!-- Form End -->
       </div>
     </div>
-  </div>
   </div>
 
   <!---All Scripts to the bottom--->
