@@ -121,13 +121,38 @@
                 <div>
 
                 </div>
+                <!--- Subscription Plans Button and Toggle --->
+                <div class="bg-slate-100">
+                    <div class="flex items-center justify-center mt-12 mb-6 text-4xl font-bold">
+                        Choose the plan which suits you best
+                    </div>
+                    <div class="flex flex-row items-center justify-center">
+                        <!-- Personal button -->
+                        <button class="border rounded-lg border-violet-600 p-2 mr-4 buttons-personal-business personal active">Personal</button>
+                        <!-- Business button -->
+                        <button class="border rounded-lg border-violet-600 p-2 buttons-personal-business business">Business</button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center space-x-4 pt-2 pb-4">
+                    <!-- Left side heading -->
+                    <h1 class="font-bold text-lg pr-8">Monthly</h1>
+                    <!-- Switch button -->
+                    <label for="periodInput" class="bg-gray-300 cursor-pointer relative rounded-full w-20 h-10">
+                        <input type="checkbox" id="periodInput" class="sr-only peer" onchange="togglePeriod()">
+                        <span class="w-2/5 h-4/5 bg-cyan-600 absolute rounded-full left-1 top-1 peer-checked:bg-blue-900 peer-checked:left-11 transition-all duration-500"></span>
+                    </label>
+                    <!-- Right side heading -->
+                    <h1 class="font-bold text-lg pl-8">Yearly</h1>
+                </div>
+
+
                 <!--- Subscription Plans --->
                 <div class="flex justify-between mt-14 pl-8 pr-8">
                     <!-- Plan 1 Div -->
                     <div class="flex items-center justify-center w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 1</h5>
-                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
+                            <p class="text-gray-600 text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
                                     <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -182,7 +207,7 @@
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 2</h5>
-                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span
+                            <p class="text-gray-600 text-4xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span
                                     id="periodText2">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
@@ -238,7 +263,7 @@
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 3</h5>
-                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span
+                            <p class="text-gray-600 text-4xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span
                                     id="periodText3">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
@@ -291,9 +316,128 @@
                         </div>
                     </div>
                 </div>
+                <!--- End of Subscription Plans --->
             </div>
         </div>
         <!--- End Container for Header and Main --->
     </div>
+
+<!--- All scripts to be added below -------------------------------------------------------->
+
+<!---Script for the Personal and Business buttons. AM.--->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    console.log("Script is running!");
+
+    let activeButton = 'personal';
+
+    let price1 = document.getElementById('priceText1');
+    if (!price1) {
+        console.error("Element with ID 'priceText1' is missing.");
+    }
+
+    let price2 = document.getElementById('priceText2');
+    if (!price2) {
+        console.error("Element with ID 'priceText2' is missing.");
+    }
+
+    let price3 = document.getElementById('priceText3');
+    if (!price3) {
+        console.error("Element with ID 'priceText3' is missing.");
+    }
+
+    let period1 = document.getElementById('periodText1');
+    if (!period1) {
+        console.error("Element with ID 'periodText1' is missing.");
+    }
+
+    let period2 = document.getElementById('periodText2');
+    if (!period2) {
+        console.error("Element with ID 'periodText2' is missing.");
+    }
+
+    let period3 = document.getElementById('periodText3');
+    if (!period3) {
+        console.error("Element with ID 'periodText3' is missing.");
+    }
+
+    function setPricesForActiveButton() {
+        if (activeButton === 'business') {
+            price1.innerHTML = '£129';
+            price2.innerHTML = '£159';
+            price3.innerHTML = '£199';
+        } else { // 'personal'
+            price1.innerHTML = '£99';
+            price2.innerHTML = '£129';
+            price3.innerHTML = '£159';
+        }
+    }
+
+    function setPeriodForActiveToggle() {
+        const periodText = document.getElementById('periodInput').checked ? 'year' : 'month';
+        period1.innerHTML = periodText;
+        period2.innerHTML = periodText;
+        period3.innerHTML = periodText;
+    }
+
+    // Initialize prices and periods on page load
+    setPricesForActiveButton();
+    setPeriodForActiveToggle();
+
+    // Update periods on toggle change
+    document.getElementById('periodInput').addEventListener('click', function() {
+        setPeriodForActiveToggle();
+    });
+
+    function toggleButtons(button) {
+        // Update activeButton only if a different button is clicked
+        if (activeButton !== button) {
+            activeButton = button;
+
+            const buttons = document.querySelectorAll('.buttons-personal-business');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'inactive');
+            });
+
+            const activeButtonElement = document.querySelector(`.${activeButton}`);
+            activeButtonElement.classList.add('active');
+
+            const inactiveButtonElement = document.querySelector(`.${activeButton === 'business' ? 'personal' : 'business'}`);
+            inactiveButtonElement.classList.add('inactive');
+
+            // Handle the prices and periods
+            setPricesForActiveButton();
+            setPeriodForActiveToggle();
+
+            // Show the corresponding heading
+            const helloHeadings = document.querySelectorAll('.hello-heading');
+            helloHeadings.forEach((heading) => {
+                heading.style.display = 'none';
+            });
+        }
+    }
+
+    // Adding the event listeners for the buttons:
+    let personalButton = document.querySelector(".buttons-personal-business.personal");
+    let businessButton = document.querySelector(".buttons-personal-business.business");
+
+    if (personalButton) {
+        personalButton.addEventListener('click', function() {
+            toggleButtons('personal');
+        });
+    }
+
+    if (businessButton) {
+        businessButton.addEventListener('click', function() {
+            toggleButtons('business');
+        });
+    }
+});
+
+</script>
+<!---End Script for the Personal and Business buttons. AM.--->
+
 </body>
 </html>
+
