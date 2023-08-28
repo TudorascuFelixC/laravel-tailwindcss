@@ -22,7 +22,8 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard'); // Redirect to dashboard or your desired location after successful login
+            // Authentication was successful. Redirect to dashboard-overview.
+            return redirect()->route('dashboard-overview');
         }
 
         return back()->withErrors([
