@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +10,6 @@
 </head>
 
 <body>
-
-
   <div class="flex flex-col items-center w-full justify-center fixed z-20">
     <nav class="flex  h-20  w-full ">
       <div class="flex pl-8">
@@ -34,6 +31,13 @@
                     <div class="mb-8 border border-gray-300 rounded-md">
                         <input type="text" id='username' name="username" class="w-full p-4" placeholder="Username" value="{{ old('username') }}">
                         @if ($errors->has('username'))
+                            <span class="text-red-500 text-sm">{{ $errors->first('username') }}</span>
+                        @endif
+                    </div>
+
+                    <div class="mb-8 border border-gray-300 rounded-md">
+                        <input type="text" id='email' name="email" class="w-full p-4" placeholder="Email Address" value="{{ old('email') }}">
+                        @if ($errors->has('email'))
                             <span class="text-red-500 text-sm">{{ $errors->first('username') }}</span>
                         @endif
                     </div>
@@ -70,40 +74,18 @@
   </div>
   </div>
 
+<!----- SCRIPTS ONLY BELOW ----->
+<script>
+  document.getElementById('login-btn').addEventListener('click', function () {
+    window.location.href = "/login"; // Replace "/register" with the actual URL or path to your "register" page
+  });
+</script>
 
-  <script>
-    document.getElementById('loginin-btn').addEventListener('click', function () {
-      window.location.href = "/login";
-    });
-  </script>
-
-  <script>
-    document.getElementById('loginin-btn').addEventListener('click', function () {
-      // Use AJAX to fetch the content of the new page
-      fetch('{{ route('login') }}')
-        .then(response => response.text())
-        .then(data => {
-          // Update the content of the page-container with the fetched data
-          document.getElementById('pagelogin-render').innerHTML = data;
-        })
-        .catch(error => {
-          console.error('Error fetching the login page:', error);
-        });
-    });
-  </script>
-
-
-  <script>
-    document.getElementById('login-btn').addEventListener('click', function () {
-      window.location.href = "/login"; // Replace "/register" with the actual URL or path to your "register" page
-    });
-  </script>
-
-  <script>
-    document.getElementById('home-btn').addEventListener('click', function () {
-      window.location.href = "/"; // Replace "/register" with the actual URL or path to your "register" page
-    });
-  </script>
+<script>
+  document.getElementById('home-btn').addEventListener('click', function () {
+    window.location.href = "/"; // Replace "/register" with the actual URL or path to your "register" page
+  });
+</script>
 
 </body>
 
