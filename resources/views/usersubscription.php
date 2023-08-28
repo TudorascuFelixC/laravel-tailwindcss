@@ -161,11 +161,11 @@
 
 
                 <!--- Subscription Plans --->
-                <div class="flex justify-between mt-14 pl-8 pr-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
                     <!-- Plan 1 Div -->
-                    <div class="flex items-center justify-center w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
-                            <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 1</h5>
+                            <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Starter Plan</h5>
                             <p class="text-white text-4xl font-extrabold tracking-tight">
                                 <span id="priceText1">$</span>
                                 <span class="text-2xl">/</span>
@@ -223,7 +223,7 @@
                     <!-- Plan 2 Div -->
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
-                            <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 2</h5>
+                            <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Basic Plan</h5>
                             <p class="text-white text-4xl font-extrabold tracking-tight">
                                 <span id="priceText2">$</span>
                                 <span class="text-2xl">/</span>
@@ -281,7 +281,7 @@
                     <!-- Plan 3 Div -->
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
-                            <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 3</h5>
+                            <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Premium Plan</h5>
                             <p class="text-white text-4xl font-extrabold tracking-tight">
                                 <span id="priceText3">$</span>
                                 <span class="text-2xl">/</span>
