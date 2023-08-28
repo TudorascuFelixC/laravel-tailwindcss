@@ -5,8 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel-Stripe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
+<style>
+    .buttons-personal-business.active {
+        background-color: purple;
+        color: white;
+    }
+
+    .buttons-personal-business.inactive {
+        background-color: #f7f7f7;
+        color: #333;
+    }
+</style>
+
 
 <body class="m-0 p-0">
     <div class="flex h-screen">
@@ -136,9 +150,9 @@
                 <div class="flex items-center justify-center space-x-4 pt-2 pb-4">
                     <!-- Left side heading -->
                     <h1 class="font-bold text-lg pr-8">Monthly</h1>
-                    <!-- Switch button -->
+                    <!-- Switch button -->                    
                     <label for="periodInput" class="bg-gray-300 cursor-pointer relative rounded-full w-20 h-10">
-                        <input type="checkbox" id="periodInput" class="sr-only peer" onchange="togglePeriod()">
+                        <input type="checkbox" id="periodInput" name="periodInput "class="sr-only peer" onchange="togglePeriod()">
                         <span class="w-2/5 h-4/5 bg-cyan-600 absolute rounded-full left-1 top-1 peer-checked:bg-blue-900 peer-checked:left-11 transition-all duration-500"></span>
                     </label>
                     <!-- Right side heading -->
@@ -152,7 +166,7 @@
                     <div class="flex items-center justify-center w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 1</h5>
-                            <p class="text-gray-600 text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
+                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
                                     <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -207,7 +221,7 @@
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 2</h5>
-                            <p class="text-gray-600 text-4xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span
+                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span
                                     id="periodText2">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
@@ -263,7 +277,7 @@
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 3</h5>
-                            <p class="text-gray-600 text-4xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span
+                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span
                                     id="periodText3">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
@@ -331,46 +345,24 @@
     console.log("Script is running!");
 
     let activeButton = 'personal';
-
     let price1 = document.getElementById('priceText1');
-    if (!price1) {
-        console.error("Element with ID 'priceText1' is missing.");
-    }
-
     let price2 = document.getElementById('priceText2');
-    if (!price2) {
-        console.error("Element with ID 'priceText2' is missing.");
-    }
-
     let price3 = document.getElementById('priceText3');
-    if (!price3) {
-        console.error("Element with ID 'priceText3' is missing.");
-    }
-
     let period1 = document.getElementById('periodText1');
-    if (!period1) {
-        console.error("Element with ID 'periodText1' is missing.");
-    }
-
     let period2 = document.getElementById('periodText2');
-    if (!period2) {
-        console.error("Element with ID 'periodText2' is missing.");
-    }
-
     let period3 = document.getElementById('periodText3');
-    if (!period3) {
-        console.error("Element with ID 'periodText3' is missing.");
-    }
+
 
     function setPricesForActiveButton() {
-        if (activeButton === 'business') {
-            price1.innerHTML = '£129';
-            price2.innerHTML = '£159';
-            price3.innerHTML = '£199';
-        } else { // 'personal'
-            price1.innerHTML = '£99';
-            price2.innerHTML = '£129';
-            price3.innerHTML = '£159';
+        const isMonthly = document.getElementById('periodInput').checked;
+        if (activeButton === 'personal') {
+            price1.innerHTML = isMonthly ? '£119.90' : '£10.90'; 
+            price2.innerHTML = isMonthly ? '£142.89' : '£12.99';
+            price3.innerHTML = isMonthly ? '£174.90' : '£15.90';  
+        } else { // 'business'
+            price1.innerHTML = isMonthly ? '£284.90' : '£25.90';
+            price2.innerHTML = isMonthly ? '£307.89' : '£27.99';
+            price3.innerHTML = isMonthly ? '£339.90' : '£30.90';
         }
     }
 
@@ -381,13 +373,20 @@
         period3.innerHTML = periodText;
     }
 
+    // Chnage prices and periods on toggle change
+    function togglePeriod() {
+        setPeriodForActiveToggle();
+        setPricesForActiveButton();
+    }
     // Initialize prices and periods on page load
-    setPricesForActiveButton();
     setPeriodForActiveToggle();
+    setPricesForActiveButton();
+
 
     // Update periods on toggle change
     document.getElementById('periodInput').addEventListener('click', function() {
         setPeriodForActiveToggle();
+        setPricesForActiveButton();
     });
 
     function toggleButtons(button) {
