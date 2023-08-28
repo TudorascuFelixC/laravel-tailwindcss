@@ -195,9 +195,9 @@
                             <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
                         </li>
                     </ul>
-                    <button type="button" id="choosePlanButton1"
+                    <button type="button" id="loginin-btn"
                     class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200
-                    dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan
+                    dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center redirectToLogin">Choose plan
                     </button>
                 </div>
             </div>
@@ -253,9 +253,9 @@
                             <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
                         </li>
                     </ul>
-                    <button type="button" id="choosePlanButton2"
+                    <button type="button" id="loginin-btn"
                     class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 
-                    dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan
+                    dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center redirectToLogin">Choose plan
                     </button>
                 </div>
             </div>
@@ -311,9 +311,9 @@
                             <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">24/7 phone & email support</span>
                         </li>
                     </ul>
-                    <button type="button" id="choosePlanButton3"
+                    <button type="button" id="loginin-btn"
                     class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 
-                    dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan
+                    dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center redirectToLogin">Choose plan
                     </button>
                 </div>
             </div>
@@ -385,8 +385,19 @@
 <!----- SCRIPTS ONLY ----->
 <script>
     document.getElementById('loginin-btn').addEventListener('click', function() {
-        window.location.href = "/login"; // 
+        window.location.href = "/login"; 
     });
+</script>
+
+<script>
+    const loginButtons = document.querySelectorAll('.redirectToLogin');
+
+    loginButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            window.location.href = "/login"; 
+        });
+});
+
 </script>
 
 <script>
@@ -400,21 +411,6 @@
         navbar.classList.remove('h-10');
     }
 });
-</script>
-
-<script>
-    document.getElementById('loginin-btn').addEventListener('click', function() {
-        // Use AJAX to fetch the content of the new page
-        fetch('{{ route('login') }}')
-        .then(response => response.text())
-        .then(data => {
-        // Update the content of the page-container with the fetched data
-        document.getElementById('pagelogin-render').innerHTML = data;
-        })
-        .catch(error => {
-        console.error('Error fetching the login page:', error);
-        });
-    });
 </script>
 
 <script>
