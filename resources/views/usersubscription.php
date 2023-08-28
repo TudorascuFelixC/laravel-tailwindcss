@@ -166,7 +166,10 @@
                     <div class="flex items-center justify-center w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 1</h5>
-                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText1">$</span>/<span id="periodText1">xxx</span></p>
+                            <p class="text-white text-4xl font-extrabold tracking-tight">
+                                <span id="priceText1">$</span>
+                                <span class="text-2xl">/</span>
+                                <span class="text-2xl" id="periodText1">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
                                     <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -221,8 +224,10 @@
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 2</h5>
-                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText2">$</span>/<span
-                                    id="periodText2">xxx</span></p>
+                            <p class="text-white text-4xl font-extrabold tracking-tight">
+                                <span id="priceText2">$</span>
+                                <span class="text-2xl">/</span>
+                                <span class="text-2xl" id="periodText2">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
                                     <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -277,8 +282,10 @@
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard Plan 3</h5>
-                            <p class="text-white text-4xl font-extrabold tracking-tight"><span id="priceText3">$</span>/<span
-                                    id="periodText3">xxx</span></p>
+                            <p class="text-white text-4xl font-extrabold tracking-tight">
+                                <span id="priceText3">$</span>
+                                <span class="text-2xl">/</span>
+                                <span class="text-2xl" id="periodText3">xxx</span></p>
                             <ul role="list" class="space-y-5 my-7">
                                 <li class="flex space-x-3 items-center">
                                     <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
