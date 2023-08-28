@@ -108,7 +108,6 @@
             <!---Header --->
             <div class="flex flex-col w-full">
                 <div class="flex justify-end items-center px-4 py-4 border-b">
-                    <!--- Bell Icon --->
                     <div
                         class="border-2 border-black rounded-xl w-10 h-10 p-2 flex items-center justify-center text-gray-800 dark:text-white">
                         <svg class="w-full h-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -132,22 +131,19 @@
 
             <!--- Main --->
             <div>
-                <div>
-
-                </div>
                 <!--- Subscription Plans Button and Toggle --->
-                <div class="bg-slate-100">
+                <div>
                     <div class="flex items-center justify-center mt-12 mb-6 text-4xl font-bold">
                         Choose the plan which suits you best
                     </div>
-                    <div class="flex flex-row items-center justify-center">
+                    <div class="flex flex-row items-center justify-center pb-5">
                         <!-- Personal button -->
                         <button class="border rounded-lg border-violet-600 p-2 mr-4 buttons-personal-business personal active">Personal</button>
                         <!-- Business button -->
                         <button class="border rounded-lg border-violet-600 p-2 buttons-personal-business business">Business</button>
                     </div>
                 </div>
-                <div class="flex items-center justify-center space-x-4 pt-2 pb-4">
+                <div class="flex items-center justify-center space-x-4 pt-2 pb-5">
                     <!-- Left side heading -->
                     <h1 class="font-bold text-lg pr-8">Monthly</h1>
                     <!-- Switch button -->                    
@@ -161,7 +157,7 @@
 
 
                 <!--- Subscription Plans --->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1 pl-2">
                     <!-- Plan 1 Div -->
                     <div class="flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col item-center justify-center ml-8">
