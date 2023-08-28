@@ -51,7 +51,7 @@
 
         <!-- Form elements -->
         <div class="mb-8 border border-gray-300 rounded-md">
-          <input type="email" class="w-full p-4" placeholder="Email">
+          <input type="text" id="username" name="username "class="w-full p-4" placeholder="username">
         </div>
         <div class="mb-8 border border-gray-300 rounded-md">
           <input type="password" class="w-full p-4" placeholder="Password">
