@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +8,21 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link href="app.css" rel="stylesheet">
 </head>
-
 <body>
 
-  <div1 class="flex flex-col items-center w-full justify-center fixed z-20">
-    <nav3 class="flex  h-20  w-full ">
-      <div class="flex pl-8">
-        <img id="home-btn" class="h-30 w-24" src="photos/EzePost Logo2POS.svg" alt="Logo">
-      </div>
-    </nav3>
-  </div1>
+
+<div class="flex flex-col items-center w-full justify-center fixed z-20">
+  <nav class="flex  h-20  w-full ">
+  <div class="flex pl-8">
+    <img id="home-btn" class="h-30 w-24" src="photos/EzePost Logo2POS.svg" alt="Logo">
+  </div>  
+  </nav>
+</div>
 
 
 
-  <div class="flex h-screen">
+
+<div class="flex h-screen">
 
     <!-- Registration Form Container -->
     <div class="flex flex-1 items-center justify-center pl-20 pr-100">
@@ -49,55 +49,53 @@
     </div>
 
     <!-- Image and Sign-in Section -->
-    <div class="bg-white-300 flex-1 flex relative text-white-800">
-      <!-- Image -->
-      <img src="/photos/AdobeStock_606546933.png" alt="Image" class="object-cover h-full w-full">
+    <!-- Image -->
+    <img src="/photos/AdobeStock_606546933.png" alt="Image" class="object-cover h-full w-full">
 
-      <!-- Centered Text and Button -->
-      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-        <span class="text-white text-3xl font-bold mb-4">Already have an account?</span>
-        <button id="login-btn" class="w-40 p-2 md:p-4 rounded-full bg-white">
-          <span class="text-black font-bold md:text-base">Sign in</span>
-        </button>
-      </div>
-    </div>
-  </div>
+<!-- Centered Text and Button -->
+<div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+  <span class="text-white text-3xl font-bold mb-4">Already have an account?</span>
+  <button id="login-btn" class="w-40 p-2 md:p-4 rounded-full bg-white">
+    <span class="text-black font-bold md:text-base">Sign in</span>
+  </button>
+</div>
+</div>
+</div>
 
-  <!---Scripts only--->
+
+<script>
+    document.getElementById('loginin-btn').addEventListener('click', function() {
+        window.location.href = "/login"; 
+    });
+</script>
 
   <script>
-    document.getElementById('loginin-btn').addEventListener('click', function () {
-      window.location.href = "/login";
-    });
-  </script>
+  document.getElementById('loginin-btn').addEventListener('click', function() {
+    // Use AJAX to fetch the content of the new page
+    fetch('{{ route('login') }}')
+      .then(response => response.text())
+      .then(data => {
+        // Update the content of the page-container with the fetched data
+        document.getElementById('pagelogin-render').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error fetching the login page:', error);
+      });
+  });
+</script>
 
-  <script>
-    document.getElementById('loginin-btn').addEventListener('click', function () {
-      // Use AJAX to fetch the content of the new page
-      fetch('{{ route('login') }}')
-        .then(response => response.text())
-        .then(data => {
-          // Update the content of the page-container with the fetched data
-          document.getElementById('pagelogin-render').innerHTML = data;
-        })
-        .catch(error => {
-          console.error('Error fetching the login page:', error);
-        });
-    });
-  </script>
 
-  <script>
-    document.getElementById('login-btn').addEventListener('click', function () {
-      window.location.href = "/login"; // Replace "/register" with the actual URL or path to your "register" page
+<script>
+    document.getElementById('login-btn').addEventListener('click', function() {
+        window.location.href = "/login"; // Replace "/register" with the actual URL or path to your "register" page
     });
-  </script>
+</script>
 
-  <script>
-    document.getElementById('home-btn').addEventListener('click', function () {
-      window.location.href = "/"; // Replace "/register" with the actual URL or path to your "register" page
+<script>
+    document.getElementById('home-btn').addEventListener('click', function() {
+        window.location.href = "/"; // Replace "/register" with the actual URL or path to your "register" page
     });
-  </script>
+</script>
 
 </body>
-
 </html>
