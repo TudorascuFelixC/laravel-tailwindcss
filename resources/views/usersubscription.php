@@ -214,7 +214,7 @@
                                     <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
                                 </li>
                             </ul>
-                            <button type="button"
+                            <button type="button" id="choosePlanButton1"
                             class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200
                             dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan
                             </button>
@@ -272,7 +272,7 @@
                                     <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
                                 </li>
                             </ul>
-                            <button type="button"
+                            <button type="button" id="choosePlanButton2"
                             class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 
                             dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan
                             </button>
@@ -330,7 +330,7 @@
                                     <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">24/7 phone & email support</span>
                                 </li>
                             </ul>
-                            <button type="button"
+                            <button type="button" id="choosePlanButton3"
                             class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 
                             dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan
                             </button>
@@ -362,15 +362,44 @@
 
     function setPricesForActiveButton() {
         const isMonthly = document.getElementById('periodInput').checked;
+        let plan1Link, plan2Link, plan3Link;
         if (activeButton === 'personal') {
-            price1.innerHTML = isMonthly ? '£119.90' : '£10.90'; 
+            price1.innerHTML = isMonthly ? '£119.90' : '£10.90';
+            plan1Link = isMonthly ?
+            'https://buy.stripe.com/test_28o9BNgw89suc0g14e' :
+            'https://buy.stripe.com/test_bIYg0b93G2028O45kr';
             price2.innerHTML = isMonthly ? '£142.89' : '£12.99';
-            price3.innerHTML = isMonthly ? '£174.90' : '£15.90';  
+            plan2Link = isMonthly ?
+            'https://buy.stripe.com/test_eVa01d5Ru6gi1lCeV5' :
+            'https://buy.stripe.com/test_8wMeW72Fi3460hy7sA';
+            price3.innerHTML = isMonthly ? '£174.90' : '£15.90';
+            plan3Link = isMonthly ?
+            'https://buy.stripe.com/test_7sI6pB3Jm3469S8aEQ' :
+            'https://buy.stripe.com/test_cN26pB3JmfQSe8o28h';
         } else { // 'business'
             price1.innerHTML = isMonthly ? '£284.90' : '£25.90';
+            plan1Link = isMonthly ?
+            'https://buy.stripe.com/test_3cs8xJ3Jm48aggw9AQ' :
+            'https://buy.stripe.com/test_7sI6pB93GgUW5BSdR3';
             price2.innerHTML = isMonthly ? '£307.89' : '£27.99';
+            plan2Link = isMonthly ?
+            'https://buy.stripe.com/test_6oEdS35Ru9suggwfZh' :
+            'https://buy.stripe.com/test_5kAeW75Ru8oq1lCeV8';
             price3.innerHTML = isMonthly ? '£339.90' : '£30.90';
+            plan3Link = isMonthly ?
+            'https://buy.stripe.com/test_4gwcNZ6Vy48a4xObJ0' :
+            'https://buy.stripe.com/test_00g4htcfSgUW1lC4gv';            
         }
+        // Set the onclick event for the choosePlanButton1 element to navigate to the plan1Link
+        document.getElementById('choosePlanButton1').onclick = function() { 
+        window.location.href = plan1Link;
+        };
+        document.getElementById('choosePlanButton2').onclick = function() { 
+        window.location.href = plan2Link;
+        };
+        document.getElementById('choosePlanButton3').onclick = function() { 
+        window.location.href = plan3Link;
+        };
     }
 
     function setPeriodForActiveToggle() {
