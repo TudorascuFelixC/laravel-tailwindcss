@@ -36,13 +36,6 @@
                     </div>
 
                     <div class="mb-8 border border-gray-300 rounded-md">
-                        <input type="text" id='email' name="email" class="w-full p-4" placeholder="Email Address" value="{{ old('email') }}">
-                        @if ($errors->has('email'))
-                            <span class="text-red-500 text-sm">{{ $errors->first('username') }}</span>
-                        @endif
-                    </div>
-
-                    <div class="mb-8 border border-gray-300 rounded-md">
                         <input type="password" name="password" class="w-full p-4" placeholder="Password">
                         @if ($errors->has('password'))
                             <span class="text-red-500 text-sm">{{ $errors->first('password') }}</span>

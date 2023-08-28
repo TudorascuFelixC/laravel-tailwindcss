@@ -20,7 +20,6 @@ class RegisterUserController extends Controller
         // Validate the input
         $data = $request->validate([
             'username' => 'required|string|max:255|unique:vepost_user',
-            'email' => 'nullable|string|email|max:255|unique:vepost_user',
             'password' => 'required|string|min:6|confirmed',
             'displayname' => 'nullable|string|max:255',
             // Add validation for other fields as necessary
@@ -29,7 +28,6 @@ class RegisterUserController extends Controller
         // Create the user
         $user = new VepostUser();
         $user->username = $data['username'];
-        $user->email = $data['email'];
         $user->vepost_addr = $this->generateVepostAddr(); // Set random vepost_addr
         $user->password = Hash::make($data['password']); // Hash the password
         if (isset($data['displayname'])) {
