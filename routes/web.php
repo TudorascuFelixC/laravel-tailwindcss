@@ -20,6 +20,9 @@ Route::get('/login', function () {
     })->name('login'); // Define the named route "register" here
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
 Route::get('/main-index', function () {
     return view('main-index');
 })->name('main-index'); // Define the named route "register" here
@@ -42,4 +45,4 @@ Route::get('/dashboard-overview', function () {
 
 Route::get('/usersubscription', function () {
     return view('usersubscription');
-})->name('usersubscription'); // Define the named route "userprofile" here
+})->name('usersubscription'); // Define the named route "usersubscription" here
