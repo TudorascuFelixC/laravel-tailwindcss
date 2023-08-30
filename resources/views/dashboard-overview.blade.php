@@ -22,13 +22,14 @@
         </div>
         <!--- DASHBOARD Button --->
         <div class="flex flex-col items-center justify-center pt-28">
-            <button class="w-full h-10 px-4 text-left text-black  hover:bg-blue-600  focus:outline-none">
+            <a href="{{ route('dashboard-overview') }}" class="w-full h-10 px-4 text-left text-black hover:bg-blue-600 focus:outline-none flex items-center">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
                 </svg>
-                <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Dashboard</a>
-            </button>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
+            </a>
         </div>
+
         <!--- USERS Button Link --->
         <div class="flex w-full pt-6">
         <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
@@ -86,8 +87,9 @@
     </div>
     <!-------------------- Sidebar END ---------------------->
 
-    <!-------------------- Header ---------------------->
-    <div class="flex flex-col w-full">     
+    <!-------------------- Header and Main content---------------------->
+    <div class="flex flex-col w-full">   
+        <!-------------------- Header ----------------------> 
         <div class="flex flex-row justify-end items-end px-4 mt-4"> 
             <!-- Question Mark Icon -->
             <div class="pr-5">
@@ -114,14 +116,15 @@
                 </div>
             </div>
         </div>
-        <!-------------------- Header END ---------------------->
-
-        <!-------------------- Page Heading ---------------------->
         <div class="pl-4">
             <h2 class="text-2xl  font-semibold">Dashboard</h2>
             <!-- Horizontal line -->
             <div class="w-full h-0.5 bg-black">
             </div>
+        <!-------------------- Header END ---------------------->
+
+        <!-------------------- Page Heading ---------------------->
+        
                 <!-- Add content from here - DO NOT TOUCH /\ -->
                 <div class="flex flex-col p-10 w-full">
                     <h2 class="text-gray-400 text-2xl font-semibold">Overview</h2>
