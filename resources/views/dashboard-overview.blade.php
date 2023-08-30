@@ -28,9 +28,10 @@
                 </svg>
                 <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
             </a>
-        </div>
+        </div> 
 
-        <!--- USERS Button Link --->
+        <!--- USERS Button Link (Admin Only --->
+        @if (Auth::check() && Auth::user()->role == 'admin')
         <div class="flex w-full pt-6">
         <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
             <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 18">
@@ -39,6 +40,8 @@
             <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Users</a>
         </button>
         </div>
+        @endif
+
         <!--- TRANSFERS Button Link --->
         <div class="flex w-full pt-6">
             <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
