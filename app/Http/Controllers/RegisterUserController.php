@@ -34,6 +34,7 @@ class RegisterUserController extends Controller
         if (isset($data['displayname'])) {
             $user->displayname = $data['displayname'];
         }
+        $user->role = 'user';
         // Default values for other fields will be automatically set based on the schema
         $user->save();
 
