@@ -41,8 +41,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/dashboard-overview', function () {
     return view('dashboard-overview');
-})->name('dashboard-overview'); // Define the named route "dashboard" here
+})->name('dashboard-overview') -> middleware('auth');
 
 Route::get('/usersubscription', function () {
     return view('usersubscription');
-})->name('usersubscription');
+})->name('usersubscription') -> middleware('auth');
