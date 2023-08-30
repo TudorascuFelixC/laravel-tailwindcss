@@ -1,35 +1,37 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Main Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-  <link href="app.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Main Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
 </head>
+
 <body>
 
 
-<div class="flex flex-col items-center w-full justify-center fixed z-20">
-  <div class="flex  h-20  w-full ">
-  <div class="flex pl-8">
-    <img id="home-btn" class="h-30 w-24" src="photos/EzePost Logo2POS.svg" alt="Logo">
-  </div>
-  </div>
-</div>
-
 <div class="flex flex-row h-screen">
+    <!-------------------- Sidebar ---------------------->
     <div class="w-2/12 p-2" style="background-image: url('/photos/AdobeStock_606546933.png')">
-
-<div1 class="flex flex-col items-center justify-center pt-28">
-        <!-- Buttons for navigation -->
-        <button class="w-full h-10 px-4 text-left text-black  hover:bg-blue-600  focus:outline-none">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
-            </svg>
-            <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Dashboard</a>
-        </button>
+        <div class="flex flex-col items-center w-full justify-center fixed z-20">
+            <div class="flex  h-20  w-full ">
+                <div class="flex pl-8">
+                    <img id="home-btn" class="h-30 w-24" src="photos/EzePost Logo2POS.svg" alt="Logo">
+                </div>
+            </div>
+        </div>
+        <!--- DASHBOARD Button --->
+        <div class="flex flex-col items-center justify-center pt-28">
+            <button class="w-full h-10 px-4 text-left text-black  hover:bg-blue-600  focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
+                </svg>
+                <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Dashboard</a>
+            </button>
+        </div>
+        <!--- USERS Button Link --->
         <div class="flex w-full pt-6">
         <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
             <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 18">
@@ -38,53 +40,52 @@
             <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Users</a>
         </button>
         </div>
-
+        <!--- TRANSFERS Button Link --->
         <div class="flex w-full pt-6">
-        <!-- Buttons for navigation -->
-        <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
-    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H1Zm0 0V2a1 1 0 0 1 1-1h5.443a1 1 0 0 1 .8.4l2.7 3.6H1Z"/>
-    </svg>
-    <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Transfers</a>
-</button></div>
-
-<div class="flex w-full pt-6">
-        <!-- Buttons for navigation -->
-        <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
-    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-    </svg>
-    <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Subscriptions</a>
-</button>
-</div>
-
-<div class="flex w-full pt-8">
-<butt class="w-full border-t border-gray-300 my-2"></div>
-
-<div class="flex w-full pt-8">
-        <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
-    <svg class="w-6 h-6 text-black dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
-    </svg>
-    <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Settings</a>
-</button>
-</div>
-
-<div class="flex w-full pt-8">
-    <form action="{{ route('logout') }}" method="post">
-        @csrf
-        <button class="w-full h-10 px-4 text-left text-black hover:bg-blue-600  focus:outline-none" type="submit">
-            <svg class="h-6 w-6 text-white inline-block mr-2" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z"/>
-                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
-                <path d="M7 12h14l-3 -3m0 6l3 -3" />
-            </svg>Logout
-        </button>
-    </form>
-</div>
-
-
-</div>
+            <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H1Zm0 0V2a1 1 0 0 1 1-1h5.443a1 1 0 0 1 .8.4l2.7 3.6H1Z"/>
+                </svg>
+                <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Transfers</a>
+            </button>
+        </div>
+        <!--- SUBSCRIPTIONS Button Link --->
+        <div class="flex w-full pt-6">
+            <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Subscriptions</a>
+            </button>
+        </div>
+        <!--- Line to seperate Settings --->
+        <div class="flex w-full pt-8">
+            <butt class="w-full border-t border-gray-300 my-2">
+        </div>
+        <!--- SETTINGS Button Link --->
+        <div class="flex w-full pt-8">
+            <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
+                <svg class="w-6 h-6 text-black dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
+                </svg>
+                <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Settings</a>
+            </button>
+        </div>
+        <!--- LOGOUT Button Link(WORKING) --->
+        <div class="flex w-full pt-8">
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button class="w-full h-10 px-4 text-left text-black hover:bg-blue-600  focus:outline-none" type="submit">
+                    <svg class="h-6 w-6 text-white inline-block mr-2" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"/>
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                    </svg>Logout
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-------------------- Sidebar END ---------------------->
 
 <!---------------------2nd part------------------------------->
 <div1 class="flex flex-col w-full"> 
