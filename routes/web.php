@@ -45,4 +45,4 @@ Route::get('/dashboard-overview', function () {
 
 Route::get('/usersubscription', function () {
     return view('usersubscription');
-})->name('usersubscription'); // Define the named route "usersubscription" here
+})->name('usersubscription');
