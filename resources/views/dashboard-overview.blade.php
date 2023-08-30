@@ -49,13 +49,14 @@
         </div>
         <!--- SUBSCRIPTIONS Button Link --->
         <div class="flex w-full pt-6">
-            <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
+            <a href="{{ route('usersubscription') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
                 </svg>
-                <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Subscriptions</a>
-            </button>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Subscriptions</span>
+            </a>
         </div>
+
         <!--- Line to seperate Settings --->
         <div class="flex w-full pt-8">
             <butt class="w-full border-t border-gray-300 my-2">
