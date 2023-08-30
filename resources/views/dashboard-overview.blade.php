@@ -127,107 +127,119 @@
                     <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
                     </div>
 
-<!-----------------------------------4 x Squares ------------------------------------------------>
-            <div class="flex">
-                <div class="grid grid-cols-4 gap-44 pl-12">
-<!-----------------------------------SQUARE 1 ------------------------------------------------>
-                <div class="flex bg-yellow-200 h-36 w-60 border rounded-lg ">
-                <div class="flex pt-6">
-                <svg width="83" height="86" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#FFCB00"/>
-</svg></div>
-                <div class="flex flex-col justify-start items-start pr-6">
-                    <div class="flex justify-end items-end">
-                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
-                    </div>
-                    <div class="flex flex-row items-start justify-start">
-                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
-                    </div>
-                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
-                </div>
-            </div>
-<!-----------------------------------SQUARE 2 ------------------------------------------------>
-            <div class="flex bg-purple-300 h-36 w-60 border rounded-lg ">
-                <div class="flex pt-6">
-                <svg width="90" height="90" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#CB7FFA"/>
-</svg></div>
-                <div class="flex flex-col justify-start items-start pr-6">
-                    <div class="flex justify-end items-end">
-                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
-                    </div>
-                    <div class="flex flex-row items-start justify-start">
-                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
-                    </div>
-                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
-                </div>
-            </div>
-<!-----------------------------------SQUARE 3 ------------------------------------------------>
-            <div class="flex bg-green-200 h-36 w-60 border rounded-lg ">
-                <div class="flex pt-6">
-                <svg width="90" height="90" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#24C93E"/>
-</svg></div>
-                <div class="flex flex-col justify-start items-start pr-6">
-                    <div class="flex justify-end items-end">
-                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
-                    </div>
-                    <div class="flex flex-row items-start justify-start">
-                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
-                    </div>
-                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
-                </div>
-            </div>
-<!-----------------------------------SQUARE 4 ------------------------------------------------>
-            <div class="flex bg-blue-200 h-36 w-60 border rounded-lg ">
-                <div class="flex pt-6">
-                <svg width="90" height="90" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#5BC9F8"/>
-</svg></div>
-                <div class="flex flex-col justify-start items-start pr-6">
-                    <div class="flex justify-end items-end">
-                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
-                    </div>
-                    <div class="flex flex-row items-start justify-start">
-                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
-                    </div>
-                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
-                </div>
-            </div>
-                </div>
-            </div>
+                    <!-------------------- Info Box x4 ---------------------->
+                    <div class="flex">
+                        <div class="grid grid-cols-4 gap-10 pl-12">
+                            <!-------------------- Info Box 1 ---------------------->
+                            <div class="flex bg-yellow-200 h-36 w-60 border rounded-lg ">
+                                <div class="flex pt-6">
+                                    <svg width="83" height="86" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#FFCB00"/>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col justify-start items-start pr-6">
+                                    <div class="flex justify-end items-end">
+                                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
+                                    </div>
+                                    <div class="flex flex-row items-start justify-start">
+                                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
+                                    </div>
+                                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
+                                </div>
+                            </div>
+                            <!-------------------- Info Box 1 END ---------------------->
 
 
-<!-----------------------------------3nd part ------------------------------------------------>
+                            <!-------------------- Info Box 2 ---------------------->
+                            <div class="flex bg-purple-300 h-36 w-60 border rounded-lg ">
+                                <div class="flex pt-6">
+                                    <svg width="90" height="90" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#CB7FFA"/>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col justify-start items-start pr-6">
+                                    <div class="flex justify-end items-end">
+                                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
+                                    </div>
+                                    <div class="flex flex-row items-start justify-start">
+                                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
+                                    </div>
+                                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
+                                </div>
+                            </div>
+                            <!-------------------- Info Box 2 END ---------------------->
 
-<div class="grid grid-cols-3 divide-x items-center mt-8 pl-12">
-    <div class="flex justify-start w-full">
-        <div class="items-center text-3xl text-gray-400 font-semibold">Recent Packages</div>
-        
-    </div>
+                            <!-------------------- Info Box 3 ---------------------->
+                            <div class="flex bg-green-200 h-36 w-60 border rounded-lg ">
+                                <div class="flex pt-6">
+                                    <svg width="90" height="90" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#24C93E"/>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col justify-start items-start pr-6">
+                                    <div class="flex justify-end items-end">
+                                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
+                                    </div>
+                                    <div class="flex flex-row items-start justify-start">
+                                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
+                                    </div>
+                                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
+                                </div>
+                            </div>
+                            <!-------------------- Info Box 3 END ---------------------->
 
-    <div class="flex w-full border border-transparent pt-9">
-        
-    </div>
+                            <!-------------------- Info Box 4 ---------------------->
+                            <div class="flex bg-blue-200 h-36 w-60 border rounded-lg ">
+                                <div class="flex pt-6">
+                                    <svg width="90" height="90" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.8458 83.5794L19.6375 68.7885C18.8344 68.2006 18.4328 67.9067 18.2164 67.4802C18 67.0536 18 66.556 18 65.5607V41.2694C18 40.9651 18 40.7074 18.0062 40.4839L41.2083 57.4661V84.517C40.842 84.3085 40.415 83.996 39.8459 83.5794L39.8458 83.5794ZM43.2083 84.517C43.5747 84.3085 44.0017 83.996 44.5708 83.5794L64.7792 68.7885C65.5823 68.2006 65.9839 67.9067 66.2003 67.4802C66.4167 67.0536 66.4167 66.556 66.4167 65.5607V41.2694C66.4167 40.9651 66.4167 40.7074 66.4105 40.4839L43.2083 57.4661V84.517ZM65.5587 38.6289L42.2083 55.7195L18.858 38.6289C19.0637 38.4616 19.319 38.2747 19.6375 38.0416L19.6375 38.0416L39.8458 23.2507C40.985 22.4169 41.5546 22 42.2083 22C42.8621 22 43.4316 22.4169 44.5708 23.2507L64.7792 38.0416C65.0977 38.2747 65.353 38.4616 65.5587 38.6289Z" fill="#5BC9F8"/>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col justify-start items-start pr-6">
+                                    <div class="flex justify-end items-end">
+                                        <h2 class="text-sm font-medium pt-4 pl-6">Total packages</h2>
+                                    </div>
+                                    <div class="flex flex-row items-start justify-start">
+                                        <h2 class="text-6xl font-serif font-bold  pl-10">99</h2>
+                                    </div>
+                                    <h2 class="text-sm font-medium pt-4 pl-12">100 mb/s</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- Info Box x4 END ---------------------->
 
-    <div class="flex justify-end border-transparent pb-5 pr-10 relative">
-    <form class="flex pl-10 justify-end ">   
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-    <div class="relative">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-            </svg>
-        </div>
-        <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search here..." required>
-        <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-    </div>
-</form>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10 -mt-4">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
+
+                    <!-------------------- TABLE Heading and Search ---------------------->
+                    <div class="grid grid-cols-3 divide-x items-center mt-8 pl-12">
+                        <div class="flex justify-start w-full">
+                            <div class="items-center text-3xl text-gray-400 font-semibold">Recent Packages
+                            </div>
+                        </div>
+                        <div class="flex w-full border border-transparent pt-9">
+                        </div>
+                        <!----- Search Box ----->
+                        <div class="flex justify-end border-transparent pb-5 pr-10 relative">
+                            <form class="flex pl-10 justify-end ">   
+                                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search
+                                </label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                        </svg>
+                                    </div>
+                                    <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search here..." required>
+                                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Horizontal line -->
+                    <div class="flex w-full pl-12 pr-10 -mt-4">
+                        <div class="w-full h-0.5 bg-gray-400">
+                        </div>
+                    </div>
 
 <!-----------------------------------4nd part ------------------------------------------------>
 <!-- 1st row -->
