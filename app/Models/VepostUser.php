@@ -14,5 +14,14 @@ class VepostUser extends Authenticatable
     public $incrementing = true;
     protected $keyType = 'int';
 
-    // ... any other methods or properties you need ...
+
+    protected $fillable = [
+        'username',
+        'displayname',
+        'vepost_addr',
+        'password',
+        'role'
+    ];
+
+    
 }
