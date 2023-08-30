@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-
 <div class="flex flex-row h-screen">
     <!-------------------- Sidebar ---------------------->
     <div class="w-2/12 p-2" style="background-image: url('/photos/AdobeStock_606546933.png')">
@@ -88,7 +86,7 @@
     <!-------------------- Sidebar END ---------------------->
 
     <!-------------------- Header ---------------------->
-    <div1 class="flex flex-col w-full">     
+    <div class="flex flex-col w-full">     
         <div class="flex flex-row justify-end items-end px-4 mt-4"> 
             <!-- Question Mark Icon -->
             <div class="pr-5">
@@ -118,9 +116,11 @@
         <!-------------------- Header END ---------------------->
 
         <!-------------------- Page Heading ---------------------->
-        <class="pl-4">
+        <div class="pl-4">
             <h2 class="text-2xl  font-semibold">Dashboard</h2>
-            <div class="w-full h-0.5 bg-black"></div><!-- Horizontal line -->
+            <!-- Horizontal line -->
+            <div class="w-full h-0.5 bg-black">
+            </div>
                 <!-- Add content from here - DO NOT TOUCH /\ -->
                 <div class="flex flex-col p-10 w-full">
                     <h2 class="text-gray-400 text-2xl font-semibold">Overview</h2>
@@ -241,227 +241,68 @@
                         </div>
                     </div>
 
-<!-----------------------------------4nd part ------------------------------------------------>
-<!-- 1st row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="item-center justify-center">
-        <p class="text-center bg-blue-200 w-full h-10 pt-2">File name</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center bg-blue-200 w-full h-10 pt-2">Date</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center bg-blue-200 w-full h-10 pt-2">To/From</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center bg-blue-200 w-full h-10 pt-2">Actions</p>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
+                    <!-------------------- TABLE for database extraction ---------------------->
+                    <!-------------------- Table Heading ---------------------->
+                    <div class="grid grid-cols-4 pt-2 pl-12 pr-10">
+                        <div class="item-center justify-center">
+                            <p class="text-center bg-blue-200 w-full h-10 pt-2">File name</p>
+                        </div>
+                        <div class="item-center justify-center">
+                            <p class="text-center bg-blue-200 w-full h-10 pt-2">Date</p>
+                        </div>
+                        <div class="item-center justify-center">
+                            <p class="text-center bg-blue-200 w-full h-10 pt-2">To/From</p>
+                        </div>
+                        <div class="item-center justify-center">
+                            <p class="text-center bg-blue-200 w-full h-10 pt-2">Actions</p>
+                        </div>
+                    </div>
+                    <!-- Horizontal line -->
+                    <div class="flex w-full pl-12 pr-10">
+                        <div class="w-full h-0.5 bg-gray-400">
+                        </div>
+                    </div>
 
-<!-- 2nd row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="flex items-center">
-        <p class="text-center w-full h-10 pt-2">
-        <svg class="w-6 h-6 text-gray-800 dark:text-black  inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-    <path d="M5 9V4.13a2.96 2.96 0 0 0-1.293.749L.879 7.707A2.96 2.96 0 0 0 .13 9H5Zm11.066-9H9.829a2.98 2.98 0 0 0-2.122.879L7 1.584A.987.987 0 0 0 6.766 2h4.3A3.972 3.972 0 0 1 15 6v10h1.066A1.97 1.97 0 0 0 18 14V2a1.97 1.97 0 0 0-1.934-2Z"/>
-    <path d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z"/>
-  </svg>
-            SOMEDOCUMENTNAME.PDF
-        </p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">05/09/2023</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2 pl-2">Alex<svg class="w-6 h-6 text-gray-800 dark:text-purple-500 inline-block mr-2 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2"><svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-  </svg>
-  <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-  </svg></p>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
-
-<!-- 3rd row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="flex items-center">
-        <p class="text-center w-full h-10 pt-2">
-            <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
-                <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-            </svg>
-            SOMEDOCUMENTNAME.PDF
-        </p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">05/09/2023</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">Robert<svg class="w-6 h-6 text-gray-800 dark:text-green-600 inline-block mr-2 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2"><svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-  </svg>
-  <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-  </svg></p>
+                    <!-------------------- Row ---------------------->
+                    <div class="grid grid-cols-4 pt-2 pl-12 pr-10">
+                        <div class="flex items-center">
+                            <p class="text-center w-full h-10 pt-2">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-black  inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                    <path d="M5 9V4.13a2.96 2.96 0 0 0-1.293.749L.879 7.707A2.96 2.96 0 0 0 .13 9H5Zm11.066-9H9.829a2.98 2.98 0 0 0-2.122.879L7 1.584A.987.987 0 0 0 6.766 2h4.3A3.972 3.972 0 0 1 15 6v10h1.066A1.97 1.97 0 0 0 18 14V2a1.97 1.97 0 0 0-1.934-2Z"/>
+                                    <path d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z"/>
+                                </svg>
+                                SOMEDOCUMENTNAME.PDF
+                            </p>
+                        </div>
+                        <div class="item-center justify-center">
+                            <p class="text-center w-full h-10 pt-2">05/09/2023</p>
+                        </div>
+                        <div class="item-center justify-center">
+                            <p class="text-center w-full h-10 pt-2 pl-2">Alex
+                                <svg class="w-6 h-6 text-gray-800 dark:text-purple-500 inline-block mr-2 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </p>
+                        </div>
+                        <div class="item-center justify-center">
+                            <p class="text-center w-full h-10 pt-2">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
+                                    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
+                                </svg>
+                                <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                    <!-------------------- Row END---------------------->
+                    <!-- Horizontal line -->
+                    <div class="flex w-full pl-12 pr-10">
+                        <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
+                    </div>
+                </div>
+        </div>
     </div>
 </div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
-
-
-<!-- 4th row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="flex items-center">
-        <p class="text-center w-full h-10 pt-2">
-        <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 1v4a1 1 0 0 1-1 1H1m8 7.5V5s3 1 3 4m3 9a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v16Zm-6-4c0 1.105-1.12 2-2.5 2S4 15.105 4 14s1.12-2 2.5-2 2.5.895 2.5 2Z"/>
-  </svg>
-            SOMEDOCUMENTNAME.PDF
-        </p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">05/09/2023</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">Will<svg class="w-6 h-6 text-gray-800 dark:text-green-600 inline-block mr-2 ml-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2"><svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-  </svg>
-  <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-  </svg></p>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
-
-
-<!-- 5th row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="flex items-center">
-        <p class="text-center w-full h-10 pt-2">
-        <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2"  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 18a.969.969 0 0 0 .933 1h12.134A.97.97 0 0 0 15 18M1 7V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v5M6 1v4a1 1 0 0 1-1 1H1m0 9v-5h1.5a1.5 1.5 0 1 1 0 3H1m12 2v-5h2m-2 3h2m-8-3v5h1.375A1.626 1.626 0 0 0 10 13.375v-1.75A1.626 1.626 0 0 0 8.375 10H7Z"/>
-  </svg>
-            SOMEDOCUMENTNAME.PDF
-        </p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">05/09/2023</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">John<svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <path d="M10 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-      <path d="M10 13c4.97 0 9-2.686 9-6s-4.03-6-9-6-9 2.686-9 6 4.03 6 9 6Z"/>
-    </g>
-  </svg></p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2"><svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-  </svg>
-  <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-  </svg></p>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
-
-
-<!-- 6th row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="flex items-center">
-        <p class="text-center w-full h-10 pt-2">
-        <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-    <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2Zm-3 15H4.828a1 1 0 0 1 0-2h6.238a1 1 0 0 1 0 2Zm0-4H4.828a1 1 0 0 1 0-2h6.238a1 1 0 1 1 0 2Z"/>
-    <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-  </svg>
-            SOMEDOCUMENTNAME.PDF
-        </p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">05/09/2023</p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2">Darius<svg class="w-6 h-6 text-gray-800 dark:text-purple-600 inline-block mr-2 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></p>
-    </div>
-    <div class="item-center justify-center">
-        <p class="text-center w-full h-10 pt-2"><svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-  </svg>
-  <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-  </svg></p>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
-
-
-<!-- 7th row -->
-<div class="grid grid-cols-4 pt-2 pl-12 pr-10">
-    <div class="flex items-center">
-        <p class="text-center w-full h-10 pt-2">
-            <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
-                <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-            </svg>
-            SOMEDOCUMENTNAME.PDF
-        </p>
-    </div>
-    <div class="flex items-center justify-center">
-        <p class="text-center w-full h-10 pt-2">06/09/2023</p>
-    </div>
-    <div class="flex items-center justify-center">
-        <p class="text-center w-full h-10 pt-2">Kevin<svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <path d="M10 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-      <path d="M10 13c4.97 0 9-2.686 9-6s-4.03-6-9-6-9 2.686-9 6 4.03 6 9 6Z"/>
-    </g>
-  </svg></p>
-    </div>
-    <div class="flex items-center justify-center">
-        <p class="text-center w-full h-10 pt-2"><svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-    <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-  </svg>
-  <svg class="w-6 h-6 text-gray-800 dark:text-black inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
-  </svg></p>
-    </div>
-</div>
-<div class="flex w-full pl-12 pr-10">
-    <div class="w-full h-0.5 bg-gray-400"></div> <!-- Horizontal line -->
-</div>
-
-
-
 </body>
 </html>
