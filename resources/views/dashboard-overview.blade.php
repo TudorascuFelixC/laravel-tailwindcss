@@ -108,7 +108,7 @@
             </div>
             <!-- User Name and User Icon -->
             <div class="flex items-center justify-center ml-2  pl-2 pr-2">
-                <h3 class="pr-4">Hello, User One!</h3>
+                <h3 class="pr-[7px]">Welcome, {{ Auth::user()->displayname }} </h3>
                 <div class="border-2 border-black rounded-full w-12 h-12 pl-2 pr-2 flex items-center justify-center">
                     <svg class="w-6 h-6 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 18">
                         <path d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
