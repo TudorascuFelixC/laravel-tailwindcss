@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Main Page</title>
+    <title>EzePost - Welcome</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
 </head>
@@ -105,7 +105,7 @@
                 <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Settings</a>
             </button>
         </div>
-        
+
         <!--- LOGOUT Button Link(WORKING) --->
         <div class="flex w-full pt-8">
             <form action="{{ route('logout') }}" method="post">
