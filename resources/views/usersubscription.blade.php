@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+
             <!--- DASHBOARD Button --->
             <div class="flex flex-col items-center justify-center pt-28">
                 <a href="{{ route('dashboard-overview') }}" class="w-full h-10 px-4 text-left text-black hover:bg-blue-600 focus:outline-none flex items-center">
@@ -40,6 +41,16 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
                     </svg>
                     <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
+                </a>
+            </div>
+
+            <!--- CONTACTS Button Link --->
+            <div class="flex w-full pt-6">
+                <a href="" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                    </svg>
+                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Contacts List</span>
                 </a>
             </div>
 
@@ -55,15 +66,16 @@
             </div>
             @endif
             
-            <!--- TRANSFERS Button Link --->
+            <!--- PACKAGE HISTORY Button Link --->
             <div class="flex w-full pt-6">
                 <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H1Zm0 0V2a1 1 0 0 1 1-1h5.443a1 1 0 0 1 .8.4l2.7 3.6H1Z"/>
                     </svg>
-                    <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Transfers</a>
+                    <a href='#' class="text-black hover:text-white px-3 py-2 font-semibold">Package Sent</a>
                 </button>
             </div>
+
             <!--- SUBSCRIPTIONS Button Link --->
             <div class="flex w-full pt-6">
                 <a href="{{ route('usersubscription') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
