@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
@@ -11,16 +12,21 @@ Route::get('/', function () {
 
 Route::get('/register', [RegisterUserController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterUserController::class, 'register'])->name('register.submit');
-// Route::get('/register', function () {
-//     return view('register');
-// })->name('register'); // Define the named route "register" here
+
 
 Route::get('/login', function () {
     return view('login');
-    })->name('login'); // Define the named route "register" here
+    })->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/dashboard-overview', function () {
+    return view('dashboard-overview');
+})->name('dashboard-overview')->middleware('auth');
+
+Route::get('/dashboard-admin', [AdminController::class, 'index'])->name('dashboard-admin');
+
 
 
 Route::get('/main-index', function () {
@@ -39,9 +45,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard'); // Define the named route "dashboard" here
 
-Route::get('/dashboard-overview', function () {
-    return view('dashboard-overview');
-})->name('dashboard-overview') -> middleware('auth');
+
 
 Route::get('/usersubscription', function () {
     return view('usersubscription');

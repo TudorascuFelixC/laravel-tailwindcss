@@ -10,7 +10,7 @@ class AuthController extends Controller
     // Show the login form
     public function showLoginForm()
     {
-        return view('auth.login'); // This view should be located in resources/views/auth/login.blade.php
+        return view('auth.login');
     }
 
     // Handle the login request
@@ -22,8 +22,13 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            // Authentication was successful. Redirect to dashboard-overview.
-            return redirect()->route('dashboard-overview');
+
+            // Check user role
+            if (Auth::user()->role == 'admin') {
+                return redirect()->route('dashboard-admin'); // Redirect to the admin dashboard
+            }
+
+            return redirect()->route('dashboard-overview'); // Default redirection for other users
         }
 
         return back()->withErrors([
