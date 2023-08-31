@@ -54,3 +54,7 @@ Route::get('/usersubscription', function () {
 Route::get('/contactsList', function () {
     return view('contactsList');
 })->name('contactsList') -> middleware('auth');
+
+Route::get('/packagesSent', function () {
+    return view('packagesSent');
+})->name('packagesSent') -> middleware('auth');
