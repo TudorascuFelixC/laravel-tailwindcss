@@ -50,3 +50,7 @@ Route::get('/dashboard', function () {
 Route::get('/usersubscription', function () {
     return view('usersubscription');
 })->name('usersubscription') -> middleware('auth');
+
+Route::get('/contactsList', function () {
+    return view('contactsList');
+})->name('contactsList') -> middleware('auth');
