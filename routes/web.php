@@ -58,3 +58,11 @@ Route::get('/contactsList', function () {
 Route::get('/packagesSent', function () {
     return view('packagesSent');
 })->name('packagesSent') -> middleware('auth');
+
+Route::get('/usersAdmin', function () {
+    return view('usersAdmin');
+})->name('usersAdmin') -> middleware('auth');
+
+Route::get('/settings', function () {
+    return view('settings');
+})->name('settings')->middleware('auth');

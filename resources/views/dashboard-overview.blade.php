@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>EzePost - Welcome</title>
+    <title>EzePost</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
 </head>
@@ -55,10 +55,10 @@
             </a>
         </div>
 
-        <!--- USERS ADMIN Link --->
+        <!--- USERS ADMIN Link (Linked) --->
         @if (Auth::check() && Auth::user()->role == 'admin')
         <div class="flex w-full pt-6">
-            <a href="" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+            <a href="{{ route('usersAdmin') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
                 </svg>
@@ -79,7 +79,7 @@
         </div>
         @endif
 
-        <!--- SUBSCRIPTIONS Link --->
+        <!--- SUBSCRIPTIONS Link (Linked) --->
         @if (Auth::check() && Auth::user()->role == 'user')
         <div class="flex w-full pt-6">
             <a href="{{ route('usersubscription') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
@@ -96,17 +96,17 @@
             <butt class="w-full border-t border-gray-300 my-2">
         </div>
 
-        <!--- SETTINGS Button Link --->
+        <!--- SETTINGS Button Link (Linked) --->
         <div class="flex w-full pt-8">
-            <button class="w-full h-10 px-4 text-left  hover:bg-blue-600  focus:outline-none">
-                <svg class="w-6 h-6 text-black dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
+            <a href="{{ route('settings') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
                 </svg>
-                <a href='#' class=" text-black hover:text-white px-3 py-2 font-semibold">Settings</a>
-            </button>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Settings</span>
+            </a>
         </div>
 
-        <!--- LOGOUT Button Link(WORKING) --->
+        <!--- LOGOUT Button Link (WORKING) --->
         <div class="flex w-full pt-8">
             <form action="{{ route('logout') }}" method="post">
                 @csrf

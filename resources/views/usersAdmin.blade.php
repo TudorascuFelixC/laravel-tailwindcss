@@ -152,7 +152,7 @@
             </div>
         </div>
         <div class="pl-4">
-            <h2 class="text-2xl  font-semibold">Contacts</h2>
+            <h2 class="text-2xl  font-semibold">Admin - Users List</h2>
             <!-- Horizontal line -->
             <div class="w-full h-0.5 bg-black">
             </div>
