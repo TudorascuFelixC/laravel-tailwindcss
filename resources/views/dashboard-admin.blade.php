@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>EzePost</title>
+    <title>EzePost Dashboard - Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
 </head>
@@ -152,7 +152,7 @@
             </div>
         </div>
         <div class="pl-4">
-            <h2 class="text-2xl  font-semibold">Dashboard</h2>
+            <h2 class="text-2xl  font-semibold">Administrator Dashboard</h2>
             <!-- Horizontal line -->
             <div class="w-full h-0.5 bg-black">
             </div>
