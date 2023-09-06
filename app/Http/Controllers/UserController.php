@@ -15,7 +15,7 @@ class UserController extends Controller
     public function getAllUsers()
     {
         try {
-            $users = VepostUser::paginate(10);  // Fetch 10 users per page
+            $users = VepostUser::get();  // Retrieve all users from the database
 
             return response()->json([
                 'success' => true,
