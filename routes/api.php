@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Define API route to get one user by ID
+Route::get('/user/{id}', [UserController::class, 'getOneUser']);
+
+// Define API route to get all users
+Route::get('/users', [UserController::class, 'getAllUsers']);

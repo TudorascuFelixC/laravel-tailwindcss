@@ -64,3 +64,5 @@ Route::get('/test', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard'); // Define the named route "dashboard" here
+
+Route::get('/users', [UserController::class, 'getAllUsers']); // Define the named route "users" here

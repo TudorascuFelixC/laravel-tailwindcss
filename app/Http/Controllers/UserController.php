@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\VepostUser;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,11 +14,41 @@ class UserController extends Controller
      */
     public function getAllUsers()
     {
-        $users = User::all();
+        try {
+            $users = VepostUser::paginate(10);  // Fetch 10 users per page
+
+            return response()->json([
+                'success' => true,
+                'data' => $users,
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Could not fetch users',
+            ], 500);
+        }
+    }
+
+    /**
+     * Get one user by ID.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getOneUser($id)
+    {
+        $user = VepostUser::find($id);
+
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'User not found',
+            ], 404);
+        }
 
         return response()->json([
             'success' => true,
-            'data' => $users,
+            'data' => $user,
         ]);
     }
 }
