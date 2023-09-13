@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ChangePasswordController;
 
 
 Route::get('/', function () {
@@ -67,3 +68,5 @@ Route::get('/dashboard', function () {
 })->name('dashboard'); // Define the named route "dashboard" here
 
 Route::get('/users', [UserController::class, 'getAllUsers']); // Define the named route "users" here
+
+Route::post('/change-password', [ChangePasswordController::class, 'changePassword']); // Define the named route "change-password" here
