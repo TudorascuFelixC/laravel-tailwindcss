@@ -520,6 +520,13 @@ document.getElementById('settingsButton').addEventListener('click', function() {
     var submenu = document.getElementById('submenu');
     submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none';
 });
+document.addEventListener('click', function(event) {
+    var settingsContainer = document.getElementById('settingsContainer');
+    if (!settingsContainer.contains(event.target)) {
+        var submenu = document.getElementById('submenu');
+        submenu.style.display = 'none';
+    }
+});
 
 </script>
 <!---End Script for the Personal and Business buttons. AM.--->
