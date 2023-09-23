@@ -22,6 +22,4 @@ class VepostUser extends Authenticatable
         'password',
         'role'
     ];
-
-    
 }
