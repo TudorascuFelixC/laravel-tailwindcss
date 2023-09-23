@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\VepostUser; // Or your user model
+use App\Models\VepostUser;
 
 class ChangePasswordController extends Controller
 {
     public function showForm() {
-        return view('passwordChange'); // Assuming your form view is named 'password_change.blade.php'
+        return view('passwordChange');
     }
     
     public function changePassword(Request $request)
@@ -28,6 +28,6 @@ class ChangePasswordController extends Controller
         $user->password = Hash::make($request->new_password);
         $user->save();
 
-        return redirect()->route('home')->with('success', 'Password changed successfully'); // Change the response here
+        return redirect()->route('dashboard-overview')->with('success', 'Password changed successfully'); // Change the response here
     }
 }

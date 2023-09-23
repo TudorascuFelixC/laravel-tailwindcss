@@ -168,21 +168,23 @@
 
         <!-------------------- Page Heading ---------------------->
             <!-- Add content from here - DO NOT TOUCH /\ -->
-            <div class="flex flex-col p-10 w-full">
-                <form action="{{ url('/change-password') }}" method="POST">
-                    @csrf
-                    
-                    <label for="current_password">Current Password</label>
-                    <input type="password" name="current_password" required>
-                    
-                    <label for="new_password">New Password</label>
-                    <input type="password" name="new_password" required>
-                    
-                    <label for="new_password_confirmation">Confirm New Password</label>
-                    <input type="password" name="new_password_confirmation" required>
-                    
-                    <button type="submit">Change Password</button>
-                </form>
+            <div class="min-h-screen flex items-center justify-center bg-gray-100">
+                <div class="shadow-xl bg-gray-400 p-8 rounded-md w-96">
+                    <form action="{{ url('/passwordChange') }}" method="POST" class="space-y-4">
+                        @csrf
+                        
+                        <label for="current_password" class="block text-lg font-semibold text-gray-600">Current Password</label>
+                        <input type="password" name="current_password" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                        
+                        <label for="new_password" class="block text-lg font-semibold text-gray-600">New Password</label>
+                        <input type="password" name="new_password" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                        
+                        <label for="new_password_confirmation" class="block text-lg font-semibold text-gray-600">Confirm New Password</label>
+                        <input type="password" name="new_password_confirmation" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                        
+                        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">Change Password</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
