@@ -91,19 +91,27 @@
         </div>
         @endif
 
-        <!--- Line to seperate Settings --->
+        <!--- Line to separate Settings --->
         <div class="flex w-full pt-8">
             <butt class="w-full border-t border-gray-300 my-2">
         </div>
 
         <!--- SETTINGS Button Link (Linked) --->
-        <div class="flex w-full pt-8">
-            <a href="{{ route('settings') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+        <div class="flex w-full pt-8 relative" id="settingsContainer">
+            <a href="javascript:void(0)" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center" id="settingsButton">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
                 </svg>
                 <span class="text-black hover:text-white px-3 py-2 font-semibold">Settings</span>
             </a>
+            
+            <!--- Submenu --->
+            <div class="submenu absolute left-0 w-full hidden" id="submenu">
+                <a href="{{ route('passwordChange') }}" class="w-full h-10 px-6 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Change Password</span>
+                </a>
+                <!--- Add more submenu items as needed --->
+            </div>
         </div>
 
         <!--- LOGOUT Button Link (WORKING) --->
@@ -166,5 +174,14 @@
         </div>
     </div>
 </div>
+
+<!--- All scripts to be added below -------------------------------------------------------->
+<script>
+document.getElementById('settingsButton').addEventListener('click', function() {
+    var submenu = document.getElementById('submenu');
+    submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none';
+});
+</script>
+
 </body>
 </html>

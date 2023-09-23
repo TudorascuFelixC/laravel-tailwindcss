@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="pl-4">
-            <h2 class="text-2xl  font-semibold">Packages</h2>
+            <h2 class="text-2xl  font-semibold">Change Password</h2>
             <!-- Horizontal line -->
             <div class="w-full h-0.5 bg-black">
             </div>

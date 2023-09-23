@@ -49,6 +49,10 @@ Route::get('/settings', function () {
     return view('settings');
 })->name('settings')->middleware('auth');
 
+Route::get('/passwordChange', function () {
+    return view('passwordChange');
+})->name('passwordChange')->middleware('auth');
+
 
 // Remove if not needed please. AM.
 Route::get('/main-index', function () {

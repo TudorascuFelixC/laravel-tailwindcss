@@ -24,116 +24,124 @@
 
 <body class="m-0 p-0">
     <div class="flex h-screen">
-        <!-------------------- Sidebar ---------------------->
-        <div class="w-2/12 p-2" style="background-image: url('/photos/AdobeStock_606546933.png')">
-            <div class="flex flex-col items-center w-full justify-center fixed z-20">
-                <div class="flex  h-20  w-full ">
-                    <div class="flex pl-8">
-                        <img id="home-btn" class="h-30 w-24" src="photos/EzePost Logo2POS.svg" alt="Logo">
-                    </div>
+    <!-------------------- Sidebar ---------------------->
+    <div class="w-2/12 p-2" style="background-image: url('/photos/AdobeStock_606546933.png')">
+        <div class="flex flex-col items-center w-full justify-center fixed z-20">
+            <div class="flex  h-20  w-full ">
+                <div class="flex pl-8">
+                    <img id="home-btn" class="h-30 w-24" src="photos/EzePost Logo2POS.svg" alt="Logo">
                 </div>
             </div>
+        </div>
 
-            <!--- DASHBOARD Link (Linked) --->
-            @if (Auth::check() && Auth::user()->role == 'user')
-            <div class="flex flex-col items-center justify-center pt-28">
-                <a href="{{ route('dashboard-overview') }}" class="w-full h-10 px-4 text-left text-black hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
-                </a>
-            </div>
-            @endif
+        <!--- DASHBOARD Link (Linked) --->
+        @if (Auth::check() && Auth::user()->role == 'user')
+        <div class="flex flex-col items-center justify-center pt-28">
+            <a href="{{ route('dashboard-overview') }}" class="w-full h-10 px-4 text-left text-black hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
+            </a>
+        </div>
+        @endif
 
-            <!--- DASHBOARD ADMIN Link (Linked) --->
-            @if (Auth::check() && Auth::user()->role == 'admin')
-            <div class="flex flex-col items-center justify-center pt-28">
-                <a href="{{ route('dashboard-admin') }}" class="w-full h-10 px-4 text-left text-black hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
-                </a>
-            </div>
-            @endif
+        <!--- DASHBOARD ADMIN Link (Linked) --->
+        @if (Auth::check() && Auth::user()->role == 'admin')
+        <div class="flex flex-col items-center justify-center pt-28">
+            <a href="{{ route('dashboard-admin') }}" class="w-full h-10 px-4 text-left text-black hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Dashboard</span>
+            </a>
+        </div>
+        @endif
 
-            <!--- CONTACTS Link (Linked) --->
-            <div class="flex w-full pt-6">
-                <a href="{{ route('contactsList') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Contacts List</span>
-                </a>
-            </div>
+        <!--- CONTACTS Link (Linked) --->
+        <div class="flex w-full pt-6">
+            <a href="{{ route('contactsList') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Contacts List</span>
+            </a>
+        </div>
 
-            <!--- USERS ADMIN Link (Linked) --->
-            @if (Auth::check() && Auth::user()->role == 'admin')
-            <div class="flex w-full pt-6">
-                <a href="{{ route('usersAdmin') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">User List</span>
-                </a>
-            </div>
-            @endif
+        <!--- USERS ADMIN Link (Linked) --->
+        @if (Auth::check() && Auth::user()->role == 'admin')
+        <div class="flex w-full pt-6">
+            <a href="{{ route('usersAdmin') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">User List</span>
+            </a>
+        </div>
+        @endif
+        
+        <!--- PACKAGE HISTORY Link (Linked) --->
+        @if (Auth::check() && Auth::user()->role == 'user')
+        <div class="flex w-full pt-6">
+            <a href="{{ route('packagesSent') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Packages Sent</span>
+            </a>
+        </div>
+        @endif
+
+        <!--- SUBSCRIPTIONS Link (Linked) --->
+        @if (Auth::check() && Auth::user()->role == 'user')
+        <div class="flex w-full pt-6">
+            <a href="{{ route('usersubscription') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Subscriptions</span>
+            </a>
+        </div>
+        @endif
+
+        <!--- Line to separate Settings --->
+        <div class="flex w-full pt-8">
+            <butt class="w-full border-t border-gray-300 my-2">
+        </div>
+
+        <!--- SETTINGS Button Link (Linked) --->
+        <div class="flex w-full pt-8 relative" id="settingsContainer">
+            <a href="javascript:void(0)" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center" id="settingsButton">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+                </svg>
+                <span class="text-black hover:text-white px-3 py-2 font-semibold">Settings</span>
+            </a>
             
-            <!--- PACKAGE HISTORY Link (Linked) --->
-            @if (Auth::check() && Auth::user()->role == 'user')
-            <div class="flex w-full pt-6">
-                <a href="{{ route('packagesSent') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Packages Sent</span>
+            <!--- Submenu --->
+            <div class="submenu absolute left-0 w-full hidden" id="submenu">
+                <a href="{{ route('passwordChange') }}" class="w-full h-10 px-6 text-left hover:bg-blue-600 focus:outline-none flex items-center">
+                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Change Password</span>
                 </a>
-            </div>
-            @endif
-
-            <!--- SUBSCRIPTIONS Link (Linked) --->
-            @if (Auth::check() && Auth::user()->role == 'user')
-            <div class="flex w-full pt-6">
-                <a href="{{ route('usersubscription') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Subscriptions</span>
-                </a>
-            </div>
-            @endif
-
-            <!--- Line to seperate Settings --->
-            <div class="flex w-full pt-8">
-                <butt class="w-full border-t border-gray-300 my-2">
-            </div>
-
-            <!--- SETTINGS Button Link (Linked) --->
-            <div class="flex w-full pt-8">
-                <a href="{{ route('settings') }}" class="w-full h-10 px-4 text-left hover:bg-blue-600 focus:outline-none flex items-center">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white inline-block mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h2m3 0h5M1 5h18M2 1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-                    </svg>
-                    <span class="text-black hover:text-white px-3 py-2 font-semibold">Settings</span>
-                </a>
-            </div>
-
-            <!--- LOGOUT Button Link (WORKING) --->
-            <div class="flex w-full pt-8">
-                <form action="{{ route('logout') }}" method="post">
-                    @csrf
-                    <button class="w-full h-10 px-4 text-left text-black hover:bg-blue-600  focus:outline-none" type="submit">
-                        <svg class="h-6 w-6 text-white inline-block mr-2" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z"/>
-                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
-                            <path d="M7 12h14l-3 -3m0 6l3 -3" />
-                        </svg>Logout
-                    </button>
-                </form>
+                <!--- Add more submenu items as needed --->
             </div>
         </div>
-        <!-------------------- Sidebar END ---------------------->
+
+        <!--- LOGOUT Button Link (WORKING) --->
+        <div class="flex w-full pt-8">
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button class="w-full h-10 px-4 text-left text-black hover:bg-blue-600  focus:outline-none" type="submit">
+                    <svg class="h-6 w-6 text-white inline-block mr-2" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"/>
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                    </svg>Logout
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-------------------- Sidebar END ---------------------->
 
         <!-------------------- Header and Main content---------------------->
         <div class="flex flex-col w-full">   
@@ -506,6 +514,11 @@
             toggleButtons('business');
         });
     }
+});
+
+document.getElementById('settingsButton').addEventListener('click', function() {
+    var submenu = document.getElementById('submenu');
+    submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none';
 });
 
 </script>
