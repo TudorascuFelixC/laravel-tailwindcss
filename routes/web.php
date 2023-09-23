@@ -49,24 +49,16 @@ Route::get('/settings', function () {
     return view('settings');
 })->name('settings')->middleware('auth');
 
+// Route to display the form
+Route::get('/passwordChange', [ChangePasswordController::class, 'showForm'])
+    ->middleware('auth')
+    ->name('passwordChange');
 
-// Remove if not needed please. AM.
-Route::get('/main-index', function () {
-    return view('main-index');
-})->name('main-index'); // Define the named route "register" here
+// Route to handle form submission
+Route::post('/passwordChange', [ChangePasswordController::class, 'changePassword'])
+    ->middleware('auth')
+    ->name('passwordChange.submit');
 
-Route::get('/subscription', function () {
-    return view('subscription');
-})->name('subscription'); // Define the named route "register" here
 
-Route::get('/test', function () {
-    return view('test');
-})->name('test'); // Define the named route "register" here
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard'); // Define the named route "dashboard" here
 
 Route::get('/users', [UserController::class, 'getAllUsers']); // Define the named route "users" here
-
-Route::post('/change-password', [ChangePasswordController::class, 'changePassword']); // Define the named route "change-password" here
